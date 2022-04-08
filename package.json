@@ -1,0 +1,69 @@
+{
+  "name": "narrat-template",
+  "version": "0.0.0-rc-6",
+  "description": "Template for Narrat game engine",
+  "main": "electron-main.js",
+  "keywords": [
+    "game",
+    "vue.js",
+    "snowpack"
+  ],
+  "author": "Liana Pigeot <liana.pigeot@protonmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "cross-env NODE_ENV=production snowpack build",
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
+    "type-check": "tsc",
+    "electron": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "es6-promise": "^4.2.8",
+    "narrat": "^0.5.4",
+    "vue": "^3.2.2",
+    "vuex": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.57",
+    "@electron-forge/maker-deb": "^6.0.0-beta.57",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.57",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
+    "@electron-forge/maker-zip": "^6.0.0-beta.57",
+    "@snowpack/plugin-vue": "^2.6.2",
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "cross-env": "^7.0.3",
+    "electron": "^13.1.6",
+    "snowpack": "^3.8.6",
+    "typescript": "^4.0.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "narrat-demo"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
