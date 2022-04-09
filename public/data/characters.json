@@ -2,10 +2,10 @@
   "config": {
     "imagesPath": "./img/characters/"
   },
-  "characters": {
-    "game": {
-      "name": "",
-      "color": "white"
-    }
+  "characters":
+  {"game": {"name": "", "color": "white"},
+  "em":    {"sprites":{"talk": "Em.png"}, "name": "Emily", "style":{"color": "#D4CA8A"}},
+  "hrn":   {"sprites":{"talk": "Hrn.png"}, "name": "Hornet", "style":{"color": "#A48670"}},
+  "pa":    {"sprites":{"talk": "PA.png"}, "name": "", "style":{"textCSS": {"fontstyle":"italic", "color": "#52BFCA"},"color": "#52BFCA"}}
   }
 }

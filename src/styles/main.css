@@ -1,0 +1,15 @@
+.dialog-title.override {
+  font-size: 1.5em;
+}
+
+.dialog-text.override {
+  font-size: 1.2em;
+}
+
+.dialog-choice.override {
+  font-size: 1.2em;
+}
+
+.dialog-container.override {
+  overflow-y: hidden;
+}

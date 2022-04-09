@@ -1,26 +1,30 @@
 {
-  "gameTitle": "Narrat Demo",
+  "gameTitle": "Two Women in Trouble",
   "images": {
-    "narrat": "img/backgrounds/narrat.png"
+    "narrat": "img/backgrounds/narrat.png",
+    "title": "img/backgrounds/Title.png",
+    "intro1": "img/backgrounds/Intro1.png",
+    "intro2": "img/backgrounds/Intro2.png"
   },
   "layout": {
     "backgrounds": {
-      "width": 880,
-      "height": 720
+      "width": 1445,
+      "height": 1080
     },
-    "dialogBottomPadding": 70,
+    "dialogBottomPadding": 185,
     "minTextWidth": 475,
     "mobileDialogHeightPercentage": 60,
     "verticalLayoutThreshold": 1000,
     "portraits": {
-      "width": 100,
-      "height": 100
+      "width": 200,
+      "height": 332
     }
   },
   "screens": {
-    "default": {
-      "background": "narrat"
-    }
+    "default": {"background": "narrat"},
+    "title":   {"background": "title"},
+    "intro1":  {"background": "intro1"},
+    "intro2":  {"background": "intro2"}
   },
   "buttons": {},
   "skills": {},
@@ -38,7 +42,10 @@
       [90, "Near Impossible"]
     ]
   },
-  "scripts": ["data/main.rpy"],
+  "scripts": [
+      "data/main.rpy",
+      "data/intro1.rpy"
+    ],
   "sound": {},
   "music": {}
 }

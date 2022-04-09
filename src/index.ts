@@ -1,3 +1,4 @@
+import './styles/main.css';
 import { startApp } from 'narrat';
 
 window.addEventListener('load', () => {
@@ -5,8 +6,8 @@ window.addEventListener('load', () => {
     charactersPath: 'data/characters.json',
     configPath: 'data/config.json',
   }, {
-    debug: false,
-    logging: false,
+    debug: true,
+    logging: true,
   });
 });
 
