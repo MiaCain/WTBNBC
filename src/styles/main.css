@@ -1,9 +1,11 @@
 .dialog-title.override {
+    font-family: GeorgiaLocal, 'Times New Roman', Times, serif;
   font-size: 1.5em;
 }
 
 .dialog-text.override {
   font-size: 1.2em;
+  color: #F5F4C0;
 }
 
 .dialog-choice.override {
@@ -12,4 +14,24 @@
 
 .dialog-container.override {
   overflow-y: hidden;
+}
+
+
+@font-face {
+    font-family: GeorgiaLocal;
+    src: local('../public/fonts/seriffic.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: GeorgiaLocal;
+    src: local('../public/fonts/georgia bold.ttf') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: GeorgiaLocal;
+    src: local('../public/fonts/georgia italic.ttf') format('woff2');
+    font-weight: normal;
+    font-style: italic;
 }

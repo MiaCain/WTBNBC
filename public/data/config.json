@@ -47,5 +47,9 @@
       "data/intro1.rpy"
     ],
   "sound": {},
-  "music": {}
+  "music": {
+      "stationblues": {
+          "path": "music/stationblues.mp3"
+      }
+  }
 }
