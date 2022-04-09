@@ -1,14 +1,14 @@
 {
-  "name": "narrat-template",
-  "version": "0.0.0-rc-6",
-  "description": "Template for Narrat game engine",
+  "name": "two-women-in-trouble",
+  "version": "0.0.1",
+  "description": "Two Women in Trouble",
   "main": "electron-main.js",
   "keywords": [
     "game",
     "vue.js",
     "snowpack"
   ],
-  "author": "Liana Pigeot <liana.pigeot@protonmail.com>",
+  "author": "Mia Cain",
   "license": "MIT",
   "scripts": {
     "start": "snowpack dev",
@@ -22,14 +22,14 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "es6-promise": "^4.2.8",
-    "narrat": "^0.5.4",
+    "narrat": "^0.6.2",
     "vue": "^3.2.2",
     "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
     "@electron-forge/maker-deb": "^6.0.0-beta.63",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.57",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
     "@electron-forge/maker-zip": "^6.0.0-beta.57",
     "@snowpack/plugin-dotenv": "^2.0.5",
@@ -46,7 +46,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "narrat-demo"
+            "name": "two-women-in-trouble"
           }
         },
         {
