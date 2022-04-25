@@ -5,11 +5,13 @@
 
 .dialog-text.override {
   font-size: 1.2em;
+  font-family: GeorgiaLocal;
   color: #F5F4C0;
 }
 
 .dialog-choice.override {
   font-size: 1.2em;
+  font-family: GeorgiaLocal;
 }
 
 .dialog-container.override {
