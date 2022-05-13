@@ -1,4 +1,5 @@
 main:
+    set DATA.OR.bagmention false
     set_screen title
     clear_dialog
     "WILL THIS BITTER NIGHT BRING CHANGE?"
@@ -9,4 +10,4 @@ main:
     choice:
         talk pa talk "Caution: this game includes surreal and graphic imagery, strong language, and discusses adult themes. Please proceed accordingly."
         "I understand.":
-            jump intro1
+            jump opener1

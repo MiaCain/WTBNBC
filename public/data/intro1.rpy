@@ -152,11 +152,7 @@ intro1_leave:
             "Both of you turn to face the forest. It reaches for the night sky like a million tentative fingers, interlocking dark in dark, until it's hard to tell where the clouds begin. It seems to pulsate. The night is dark."
             talk em talk "Should we...?"
             talk em talk "Maybe this was a mistake..."
-            #MISSING
-            jump intro1_exit
-        "('Maybe we should go back...')":
-            #MISSING
-            "Text missing"
+            talk hrn talk "Let's go. Whetever's there is going to be better than that place."
             jump intro1_exit
 intro1_exit:
     "The two of you head towards the looming forest..."

@@ -73,7 +73,6 @@ day1forest_cityview:
             jump day1forest_trees
 
 day1forest_trees:
-    play music forestsong
     set_screen blank
     "The city is still reeling through your head. Thinking about it, you remember a slogan sprayed on a concrete wall by the canal off of Metternich Square. It said..."
     "'IT'S KILLED AL L OF IT/"
@@ -83,6 +82,7 @@ day1forest_trees:
     "-is nowhere at all. Its dreadful to think about."
     "You suppose the City was never as bad for Emily as it was for you, in her family's polyceramic high-rise. If it wasn't for the Section getting passed, she might never have-"
     set_screen forest1
+    play music forestsong
     "You're startled to find yourself amidst the trees already. It's gotten darker, but the wind is almost gone now, beyond the quiet rustling of the pines far above."
     "The ground is littered with needles, most of them grey and brown. No grass or underbrush grows here."
     choice:
@@ -93,7 +93,12 @@ day1forest_trees:
                 "She shoots you a reproachful look, then keeps moving. You feel a little bad."
                 set DATA.FORhasCoat false
                 jump day1forest_cont
-            $else:
+
+            else:
+                $if this.DATA.tensionPoints > 3:
+                    "She shoots you a reproachful look, then keeps moving. You feel a little bad."
+                    set DATA.FORhasCoat false
+                    jump day1forest_cont
                 "She gives you a little smile, and accepts. You watch her put it on, then pull a few trapped strands of hair free with a flick."
                 "The rough black corduroy goes quite well with her pale dress. You ignore the sudden chill at your back."
                 set DATA.FORhasCoat true
@@ -107,7 +112,7 @@ day1forest_trees:
                 "She quickens her pace a little, and her trunk bounces on a stray root. You hurry to keep up."
                 set DATA.FORhasCoat false
                 jump day1forest_cont
-            $else:
+            else:
                 "She gives you a little smile."
                 talk em talk "Thanks, Hornet."
                 "You watch her put it on. She pulls a few trapped strands of hair free with a flick."
@@ -125,7 +130,7 @@ day1forest_cont:
     "You keep walking for a while."
     "Tiredness is starting to set in a little. The forest is repetitive, rows upon rows of slender tall pines. Real enough, but planted to feed industry, all the same."
     "There is little wildlife. You hear birdcalls now and then, and you can see insects flit through the air just in front of you."
-    $if this.DATA.tensionPoints <= 3:
+    $if this.DATA.tensionPoints <= 2:
         talk em talk "Hornet?"
         talk hrn talk "Hm?"
         talk em talk "I'm scared. I don't think I want to do this anymore."
@@ -163,4 +168,62 @@ day1forest_cont:
     "Floodlights hang from some of their bellies. It's impossible to say whether they're looking for Emily or something else."
     talk em talk "They're so loud!"
     "Emily whines over the din. They are; it sounds like half a dozen trains passing over you, carbon rotors slicing through the heady air."
-    talk em talk "Do you think they're-"
+    choice:
+        talk em talk "Do you think they're-"
+        "('Looking for us? Probably.')":
+            talk hrn talk "Looking for us? Probably. C'mon, keep your head down."
+        "('No, they aren't.')":
+            talk hrn talk "No, I don't think they're looking for us."
+            talk hrn talk "But keep your head down anyway, okay?"
+    "She looks irritated for a moment."
+    choice:
+        talk em talk "That's not what I meant. I was asking if you think they're scary."
+        "('That's the same thing!')":
+            add DATA.tensionPoints 1
+            talk hrn talk "That's the same thing!"
+            "She looks very angry at that, and turns away."
+            talk em talk"Look I just hope they're gone soon..."
+            "she hisses."
+        "('Oh. Yeah, they are.')":
+            add DATA.tensionPoints 1
+            talk hrn talk "Oh. Yeah, they are."
+            $if this.DATA.FORhasCoat:
+                "She bundles herself up in your coat, like she's trying to hide."
+            talk em talk "O-oh. I hope they'll move on soon..."
+        "('They're just doing their job. Probably surveying for fires.')":
+            talk hrn talk "They're just doing their job. Probably surveying for fires."
+            "She seems to like that."
+            talk em talk "Still, I hope they'll move on soon."
+    set_screen blank
+    "It's not long before her wish is granted, and the tadpoles clear from their muddy grey pond."
+    "You come out from your meager hiding spot and keep moving."
+    jump day1forest_cut
+
+day1forest_cut:
+    set_screen blank
+    "Emily suddenly gasps in the darkness. You whirl around to see what the matter is."
+    talk hrn talk "Emily!?"
+    choice:
+        talk em talk "My hand! My hand!"
+        "(Take a look)":
+            set DATA.FORlookedAtScratch true
+            "You lean in."
+            set_screen forest2b
+            "There's a small cut on her left hand. It's barely bleeding; You've seen people get much worse at the warehouse. A whole arm once."
+            talk hrn talk "Emily... It's not so bad. It'll heal in no time, you'll see."
+            talk em talk "What if I get blood poisoning!?"
+            talk hrn talk "You won't. And even if, we can take care of it."
+            "You're trying to keep exasperation out of your voice."
+            talk hrn talk "Let's find somewhere to sleep, okay? It's getting very late."
+            talk em talk "O-okay Hornet."
+            jump day1bedtime
+        "(Keep moving)"
+            set DATA.FORlookedAtScratch false
+            add DATA.tensionPoints 1
+            talk hrn talk "Keep your voice down, Emily, we have to keep going."
+            "You feel irritation well up inside you. Your chest feels tight."
+            talk hrn talk "Unless you want those helicoptres back?"
+            talk em talk "N-no, I guess not..."
+            "She follows along again, meekly."
+            jump day1bedtime
+    
