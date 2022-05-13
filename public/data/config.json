@@ -95,13 +95,13 @@
       "data/day4noon.rpy",
       "data/outro1.rpy"
     ],
-  "sound": {},
-  "music": {
-      "stationblues": {"path": "music/stationblues.mp3"},
-      "banquetsong": {"path": "music/banquetsong.mp3"},
-      "forestsong": {"path": "music/forestsong.mp3"},
-      "teasong": {"path": "music/teasong.mp3"},
-      "sleeptime": {"path": "music/sleeptime.mp3"},
-      "swampsong": {"path": "music/swampsong.mp3"}
+  "audio": {
+      "stationblues": {"loop": true, "src": "music/stationblues.mp3"},
+      "banquetsong": {"loop": true, "src": "music/banquetsong.mp3"},
+      "forestsong": {"loop": true, "src": "music/forestsong.mp3"},
+      "teasong": {"loop": true, "src": "music/teasong.mp3"},
+      "sleeptime": {"loop": true, "src": "music/sleeptime.mp3"},
+      "swampsong": {"loop": true, "src": "music/swampsong.mp3"},
+      "empty": {"loop": true, "src": "music/empty.mp3"}
   }
 }

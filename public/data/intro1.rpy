@@ -5,6 +5,7 @@ intro1:
     set DATA.score 0
 
     play music stationblues
+
     "The two of you have come a long way. All the way to Peele Station, the final stop on the west line."
     "The night is cool and Emily shakes a little. You wonder again why she didn't bring a coat."
     choice:
@@ -115,6 +116,9 @@ intro1_hesitate:
                     talk hrn talk "You'll be happy for it later. C'mon."
                     talk em talk "S-sure, I guess..."
                     "She drops the can into her case."
+                    talk em talk "Let's get going, Hornet."
+                    jump intro1_leave
+
                 "('Can I have some?')":
                     set DATA.hasSoda false
                     add DATA.tensionPoints -1

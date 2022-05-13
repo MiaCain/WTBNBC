@@ -22,22 +22,22 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "es6-promise": "^4.2.8",
-    "narrat": "^0.6.2",
-    "vue": "^3.2.2",
-    "vuex": "^4.0.0-rc.2"
+    "narrat": "^0.7.0",
+    "vue": "^3.2.33",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
     "@electron-forge/maker-deb": "^6.0.0-beta.63",
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
-    "@electron-forge/maker-zip": "^6.0.0-beta.57",
-    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@snowpack/plugin-dotenv": "^2.2.0",
     "@snowpack/plugin-vue": "^2.6.2",
     "cross-env": "^7.0.3",
     "electron": "^13.6.9",
-    "snowpack": "^3.8.6",
-    "typescript": "^4.0.2"
+    "snowpack": "^3.8.8",
+    "typescript": "^4.6.3"
   },
   "config": {
     "forge": {

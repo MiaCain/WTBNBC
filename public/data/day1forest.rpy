@@ -1,10 +1,15 @@
 day1forest_offramp:
+    play music empty
     set_screen blank
     "The night feels especially cold now that you're off the pathway."
     choice:
         "The rattling of Emily's trunk has been replaced by a dull thumping as it bounces over dusty ground and uneven wild grasses."
         "('I still can't believe you didn't just bring a backpack.')":
-            #MISSING
+            talk hrn talk "I can't believe you didn't just bring a backpack. That thing is going to break once we're going over any rough terrain."
+            talk hrn talk "Those heels too, actually."
+            "Emily gives you an irritated look."
+            talk em talk "Shut up, Hornet. I can deal with it myself."
+            "The air between you becomes bitter."
             set DATA.OR.bagmention true
             add DATA.tensionPoints 1
             jump day1forest_cityview
@@ -68,11 +73,14 @@ day1forest_cityview:
             jump day1forest_trees
 
 day1forest_trees:
+    play music forestsong
     set_screen blank
     "The city is still reeling through your head. Thinking about it, you remember a slogan sprayed on a concrete wall by the canal off of Metternich Square. It said..."
     "'IT'S KILLED AL L OF IT/"
     "EVEN THE STARS'"
-    "Whoever wrote it wasn't wrong. There isn't a single star visible tonight. Even the moon, which you've seen on a good night now and then when getting streetfood with coworkers after a late shift, is nowhere at all. It feels dreadful."
+    "Whoever wrote it wasn't wrong. There isn't a single star visible tonight. Even the moon, which you've seen on a good night now and then-"
+    "(when getting kebabs with coworkers after a late shift)"
+    "-is nowhere at all. Its dreadful to think about."
     "You suppose the City was never as bad for Emily as it was for you, in her family's polyceramic high-rise. If it wasn't for the Section getting passed, she might never have-"
     set_screen forest1
     "You're startled to find yourself amidst the trees already. It's gotten darker, but the wind is almost gone now, beyond the quiet rustling of the pines far above."
@@ -80,8 +88,79 @@ day1forest_trees:
     choice:
         "Emily shivers."
         "(Offer her your coat, quietly)":
+            "You gesture at your coat, and raise a brow at Emily."
             $if this.DATA.OR.bagmention:
-                
-        "(Ask if she wants to borrow your coat)":
-        "(Ignore her)":
+                "She shoots you a reproachful look, then keeps moving. You feel a little bad."
+                set DATA.FORhasCoat false
+                jump day1forest_cont
+            $else:
+                "She gives you a little smile, and accepts. You watch her put it on, then pull a few trapped strands of hair free with a flick."
+                "The rough black corduroy goes quite well with her pale dress. You ignore the sudden chill at your back."
+                set DATA.FORhasCoat true
+                jump day1forest_cont
 
+        "(Ask if she wants to borrow your coat)":
+            talk em talk "Do you want to use this for a while? Me having a sweater and all."
+            $if this.DATA.OR.bagmention:
+                "She shoots you a reproachful look."
+                talk em talk "No, I think I'll be fine, thanks."
+                "She quickens her pace a little, and her trunk bounces on a stray root. You hurry to keep up."
+                set DATA.FORhasCoat false
+                jump day1forest_cont
+            $else:
+                "She gives you a little smile."
+                talk em talk "Thanks, Hornet."
+                "You watch her put it on. She pulls a few trapped strands of hair free with a flick."
+                "The rough black corduroy goes quite well with her pale dress. You ignore the sudden chill at your back."
+                set DATA.FORhasCoat true
+                jump day1forest_cont
+        "(Ignore her)":
+            set DATA.FORhasCoat false
+            add DATA.tensionPoints 1
+            "You don't pay her any mind. She should have listened to you in the first place."
+            "Something inside you feels maliciously triumphant. Of COURSE it was going to be cold!"
+            jump day1forest_cont
+
+day1forest_cont:
+    "You keep walking for a while."
+    "Tiredness is starting to set in a little. The forest is repetitive, rows upon rows of slender tall pines. Real enough, but planted to feed industry, all the same."
+    "There is little wildlife. You hear birdcalls now and then, and you can see insects flit through the air just in front of you."
+    $if this.DATA.tensionPoints <= 3:
+        talk em talk "Hornet?"
+        talk hrn talk "Hm?"
+        talk em talk "I'm scared. I don't think I want to do this anymore."
+        $if this.DATA.FORhasCoat:
+            "She pulls your coat tighter around herself."
+        choice:
+            talk hrn talk "Hey now..."
+            "('It could be worse')":
+                talk hrn talk "It could be worse."
+                "She sniffs."
+                talk hrn talk "We could have gotten caught at any point so far. Even at Central Station. Even before then."
+                "You rub her shoulder."
+                talk hrn talk "We've made it this far, we'll find a way forward."
+                talk em talk "You think so? We don't even know what's out there..."
+                talk hrn talk "Yeah. Let's just find a place to rest, alright?"
+                talk em talk "Okay. Thank you, Hornet."
+            "('It'll be ok')":
+                "You smile at her."
+                talk hrn talk "It'll be okay, Emily. We'll get to somewhere new."
+                talk hrn talk "With more room to breathe. You won't need to hear the electric droning in the walls ever again, okay?"
+                "She seems comforted."
+                talk em talk "Thank you, Hornet. I-"
+                talk em talk "I don't know what I'd do without you. Let's move on."
+                add DATA.score 1
+            "(Embrace her)":
+                "You pull her into a hug. She seems comforted."
+                "After a few moments clinging to her warm body, the two of you agree to move on."
+                add DATA.score 1
+        "Thus comforted, you keep trecking into the woods..."
+    set_screen forest2    
+    "Loud noise interrupts your wandering. Looking up, you see black shapes against the sky."
+    talk em talk "Helicoptres-!"
+    "You pull her towards you, next to one of the million identical tree-trunks, and the two of you watch the procession."
+    "They look like tadpoles darting across a pond."
+    "Floodlights hang from some of their bellies. It's impossible to say whether they're looking for Emily or something else."
+    talk em talk "They're so loud!"
+    "Emily whines over the din. They are; it sounds like half a dozen trains passing over you, carbon rotors slicing through the heady air."
+    talk em talk "Do you think they're-"
