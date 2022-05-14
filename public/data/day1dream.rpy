@@ -11,7 +11,7 @@ day1dream:
     play music banquetsong
     talk pa talk "You've got seat reserved at a great banquet, Emily."
     talk pa talk "You can see a hundred guests - two hundred more in the great wall-to-wall mirrors lining the hall, and each glazen hall with its own reflection, driving attendance levels into infinity."
-    talk pa talk "All of them are eating. They're dressed in finery and livery, the rouches of high society, fibreglass cufflink and satin pocket linings on everyone."
+    talk pa talk "All of them are eating. They're dressed in finery and livery, the ruches of high society, fibreglass cufflinks and satin pocket linings on everyone."
     talk pa talk "The colours are gaudy - all of them. The clothes, yes, but also the tablecloth, the plates, all of it gleams in coral and amber and gilded wood."
     talk pa talk "Next to them all you look nearly plain - made up in a simple red shift, your hair combed over one shoulder. When you feel for them, you aren't even wearing jewels. You feel ashamed - you must stick out sorely."
     talk pa talk "You attempt to make out what the conversation is about, or who is in attendance - but the faces before you keep averting their gaze, and your eyes slip off them."

@@ -3,7 +3,7 @@ day1forest_offramp:
     set_screen blank
     "The night feels especially cold now that you're off the pathway."
     choice:
-        "The rattling of Emily's trunk has been replaced by a dull thumping as it bounces over dusty ground and uneven wild grasses."
+        "The rattling of Emily's trunk has been replaced by a dull thumping as it bounces over dusty ground and coarse wild rushes."
         "('I still can't believe you didn't just bring a backpack.')":
             talk hrn talk "I can't believe you didn't just bring a backpack. That thing is going to break once we're going over any rough terrain."
             talk hrn talk "Those heels too, actually."

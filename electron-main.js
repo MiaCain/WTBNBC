@@ -5,8 +5,11 @@ const path = require("path");
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1280,
-    height: 720,
+    autoHideMenuBar: true,
+    frame: false,
+    //maximizable: true,
+    width: 1920,
+    height: 1080,
     resizable: false,
     fullscreenable: true,
     webPreferences: {
@@ -15,7 +18,7 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  mainWindow.setAspectRatio(1280 / 720);
+  mainWindow.setAspectRatio(1920 / 1080);
   mainWindow.loadFile("build/index.html");
 
   // Open the DevTools.
@@ -27,6 +30,7 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow();
+  //mainWindow.maximize();
 
   app.on("activate", function () {
     // On macOS it's common to re-create a window in the app when the
