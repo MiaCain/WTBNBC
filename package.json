@@ -22,7 +22,7 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "es6-promise": "^4.2.8",
-    "narrat": "^0.8.2",
+    "narrat": "^0.8.3",
     "vue": "^3.2.33",
     "vuex": "^4.0.2"
   },
