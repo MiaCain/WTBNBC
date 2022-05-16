@@ -1,5 +1,6 @@
 main:
-    set DATA.OR.bagmention false
+    set data.OR.bagmention false
+    set data.hasFirstaid false
     set_screen title
     clear_dialog
     "WILL THIS BITTER NIGHT BRING CHANGE?"

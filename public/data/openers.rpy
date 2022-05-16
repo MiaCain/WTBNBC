@@ -1,5 +1,6 @@
 opener1:
     set_screen interl1
+    clear_dialog
     "Part 1"
     set_screen interl1p
     talk poet talk "'IN THE EVENING LIES THE CITY DULL AND BROWN,"
@@ -11,15 +12,21 @@ opener1:
 
 opener2:
     set_screen interl2
-    "Part 1"
+    clear_dialog
+    stop music
+    " "
+    "Part 2"
     set_screen interl2p
     talk poet talk "'Who has no house now, will not build one"
     talk poet talk "who is alone now, will remain that way"
     "    - Rainer Maria Rilke"
-    jump day2dream
+    jump day2swamp
 
 opener3:
     set_screen interl3
+    clear_dialog
+    stop music
+    " "
     "Part 3"
     set_screen interl3p
     talk poet talk "'And then she untied her golden stocking"

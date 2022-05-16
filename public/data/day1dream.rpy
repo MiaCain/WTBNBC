@@ -1,4 +1,5 @@
 day1dream:
+    clear_dialog
     set_screen blank
     play music empty
     "..."
@@ -35,7 +36,7 @@ day1dream:
     "To see her and know it's already over."
     choice:
         talk pa talk "She's a predator here. You know it. You can see it in her eyes. She's going to draw closer and closer and then"
-        "She's going to drink the hot blood out of my throat, and eat my heart and stomach.":
+        "She's going to drink the hot blood out of my throat, and eat my heart and my stomach":
             "You drop the cup in horror, the contents splashing to the ground, one reflection dissipating into a million shards, each too small to hurt you now."
     set_screen blank
     play music sleeptime
@@ -45,19 +46,19 @@ day1dream:
 day1dream_wake:
     set_screen banq4
     "You can hear Hornet snoring softly below you. You reach down, to touch her shoulder, touch her hair."
-    talk em talk "Hornet,"
-    "You whisper, then hiss,"
+    talk em talk "hornet..."
+    "you whisper, then hiss-"
     talk em talk "Hornet!"
     "You give her a slight squeeze and she breathes in. Her eyes open a smidge."
     talk hrn talk "...Emily? What is..."
     choice:
         "She freezes and her eyes open a little wider when she sees the look in yours."   
-        "('Promise me you won't ever hurt me.')":
+        "'Promise me you won't ever hurt me.'":
             talk em talk "Promise me you won't ever hurt me."
             talk em talk "Promise it. Swear it. You don't want to... You won't do me any, you... you fucking..."
     "A gentle touch on your arm distracts you."
     talk hrn talk "Did you have a bad dream?"
-    $if this.DATA.score >= 1:
+    $if this.data.score >= 1:
         "Hornet plants a gentle kiss on your forehead."
         talk hrn talk "It was only a bad dream, Emily. Try to get some more rest, it'll be morning soon."
     talk hrn talk "I promise I won't ever hurt you, Emily. Or why would I have run away with you?"
@@ -66,4 +67,4 @@ day1dream_wake:
     set_screen blank
     "Feeling a little less panicked, you drift off again."
     "This time, your rest is untroubled..."
-    jump day2swamp
+    jump opener2
