@@ -201,6 +201,8 @@ day2swamp_train:
             talk hrn talk "On the walkway? Are you crazy?"
             "Hot blood rushes to your head."
             talk em talk "Don't give me that! It looks unsafe!"
+            $if this.data.tensionPoints > 5:
+                "Who does this rat think she is!?"
             "Hornet turns back to look around the inside of the carriage, then pulls her feet in, and jumps on the seat."
             "You screech in shock. Birds startle, somewhere."
             "She kicks the inside of the carriage for good measure. The metal creaks, but the structure doesn't so much as tremble."

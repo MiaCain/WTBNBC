@@ -1,8 +1,5 @@
 day2bedtime_firstaid:
     play music sleeptime
-    #see about first aid kit
-    #hornet lets you use it if she inspected it, flares up if tension is high or she didnt look
-    #score if you decide to keep it but low tension. kiss on the cheek from hornet
     clear_dialog
     set_screen swamp6
     "The inside of the carriage smells bad, but it's not the worst thing ever. It's natural at least, not too unlike last night's hollow."
@@ -151,11 +148,12 @@ day2bedtime_firstaid:
 day2bedtime_noAid:
     talk em talk "I think it'll be okay. It's only a scratch."
     "Hornet seems to like that. She takes your hand and plants a gentle kiss on the scratch. Suddenly, it feels better. Almost fine."
-    talk hornet talk "I'm glad. We can save this in case something terrible happens, alright?"
+    talk hrn talk "I'm glad. We can save this in case something terrible happens, alright?"
     "That sounds... Frugal. You suppose she has a point. Maybe your hand will heal on its own. You watch her pack the medicine away."
     talk em talk "Alright. Let's go to bed, Hornet, I'm sleepy."
     set data.hasFirstaid true
     add data.tensionPoints -1
+    jump day2bedtime_opener2
 
 day2bedtime_opener2:
     clear_dialog

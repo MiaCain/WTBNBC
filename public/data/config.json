@@ -120,7 +120,8 @@
       "data/day4morning.rpy",
       "data/day4evening.rpy",
       "data/day4noon.rpy",
-      "data/outro1.rpy"
+      "data/outro1.rpy",
+      "data/ASetAttributes.rpy"
     ],
   "audio": {
       "stationblues": {"loop": true, "src": "music/stationblues.mp3"},
