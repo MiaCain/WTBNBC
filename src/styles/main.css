@@ -15,9 +15,14 @@
 }
 
 .dialog-container.override {
+  background-image: url("/img/ui/text.png");
   overflow-y: hidden;
 }
 
+.interact-button {
+    background-image: url("/img/ui/continuet0.png");
+    color: rgba(0, 0, 0, 0) !important;
+}
 
 @font-face {
     font-family: GeorgiaLocal;

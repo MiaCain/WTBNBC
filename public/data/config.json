@@ -33,6 +33,8 @@
     "tea1b": "img/backgrounds/06_dream01b.png",
     "tea2b": "img/backgrounds/06_dream02b.png",
     "tea3": "img/backgrounds/06_dream03.png",
+    "river1": "img/backgrounds/07_river01.png",
+    "river2": "img/backgrounds/07_river02.png",
     "blank": "img/backgrounds/blank.png",
     "error": "img/backgrounds/error.png"
   },
@@ -83,6 +85,8 @@
     "tea1b": {"background": "tea1b"},
     "tea2b": {"background": "tea2b"},
     "tea3": {"background": "tea3"},
+    "river1": {"background": "river1"},
+    "river2": {"background": "river2"},
     "blank": {"background": "blank"},
     "error": {"background": "error"},
     "outro1": {"background": "narrat"}
@@ -130,6 +134,8 @@
       "teasong": {"loop": true, "src": "music/teasong.mp3"},
       "sleeptime": {"loop": true, "src": "music/sleeptime.mp3"},
       "swampsong": {"loop": true, "src": "music/swampsong.mp3"},
-      "empty": {"loop": true, "src": "music/empty.mp3"}
+      "empty": {"loop": true, "src": "music/empty.mp3"},
+      "riverNice": {"loop": true, "src": "music/riverNice.mp3"},
+      "riverTense": {"loop": true, "src": "music/riverBad.mp3"}
   }
 }

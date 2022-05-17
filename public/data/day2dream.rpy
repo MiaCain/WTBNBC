@@ -1,5 +1,4 @@
 day2dream:
-    stop music
     $if this.data.tensionPoints > 5:
         jump day2dream_worse
     else:
@@ -100,7 +99,6 @@ day2dream_worse:
     talk poet talk "They're on the walls and on your pillow and on the carved furniture and on the glasses in the drink cabinet and on the wallpaper and on the carpet there are a hundred million threads the colours of rotting apples and pears in the grass weaving to form dogs slinking away."
     talk poet talk "All of them are looking at you."
     "They won't hurt you. They'll keep their distance and watch until you die, and then they will eat you cold."
-    "Wet noses will push their way into your ribcage."
     talk poet talk "Distantly there's chattering, but you can't pay attention to it. Fear is choking you."
     choice:
         talk poet talk "Fear of the dogs, and..."
@@ -118,14 +116,34 @@ day2dream_worse:
             set_screen tea1b
             "She passes you a cup. Your hands are trembling so bad..."
             "Droplets of scalding hot tea burn you, sloughing the skin off your legs and your arms whenever you spill any. Even the saucer is hot."
-            talk pa talk "The tea smells of rotting fruit. It gets drunken in here often."
-            
-    #WORSE DREAM
+            talk pa talk "The tea smells of rotting fruit. It's poured here often."
+            "The cup has dogs on it too. They're watching you, leaping around in a circle, a great feral pack of them. You feel horror dawning even at the thought..."
+            talk pa talk "Take a fucking sip, babe."
+            "You raise the cup to your lips, when-"
+            set_screen tea3
+            choice:
+                talk poet talk "It's her again. The fucking she-bitch."
+                "No...":
+                    "Yes, I'm afraid."
+                    talk pa talk "Not a tigre this time."
+                    talk pa talk "She's a black dog, in the darkest night, keeping her distance. But she'll eat you all the same, eventually."
+                    "She'll just abandon you first."
+            talk pa talk "That's right. Dogs are tools. They're objects, but they serve only one master, and..."
+            talk pa talk "She's mentioned her. This Cel person. Celice? It was Celice. That's who holds the leash. Rat fuck poverty stricken fucking Celice."
+            "Hornet would be nothing without you. But she's going to do this to you?"
+            "You even paid her fucking rent when she had that cold."
+            "Rage flares in your stomach."
+            "Hatred"
+            "and bitter fear."
+            set_screen blank
+            stop music
+            talk poet talk "Wet noses will push their way into your ribcage."
+            "The thought comes unbidden, and the cup is gone."
+    jump day2dream_wake
 
 day2dream_wake:
     set_screen blank
-    stop music
-    #WAKE
+    play music empty
     "-"
     "You're in the train cart."
     "Hornet is dozing by you."
@@ -136,4 +154,6 @@ day2dream_wake:
         "...leave you? Abandon you to these endless woods?"
     "You don't wake her this time... You can't. If she's plotting to abandon you or... or worse... she'll just lie to you."
     "It's so dark you can't even see her. You feel her, and you can hear her..."
+    talk em talk "Don't... leave me, Hornet..."
     "Sleep comes again, eventually, but the bad taste remains..."
+    jump day3river
