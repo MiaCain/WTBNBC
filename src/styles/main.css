@@ -14,13 +14,49 @@
   font-family: GeorgiaLocal;
 }
 
+.modal-container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.modal-container.bg-gray-800{
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("img/ui/pausemenu.png") !important;
+
+}
+
+
+.button.menu-toggle-button{
+    user-select: none;
+    -moz-user-select: none;
+    background-image: url("img/ui/menu0.png") !important;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0) !important;
+
+}
+.button.menu-toggle-button:hover{
+    background-image: url("img/ui/menu1.png") !important;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0) !important;
+
+}
+.dialog.override {
+  background-image: url("img/ui/text.png");
+}
+
 .dialog-container.override {
-  background-image: url("/img/ui/text.png");
+  background-color: rgba(0, 0, 0, 0) !important;
+  background-image: url("img/ui/scroll.png");
   overflow-y: hidden;
 }
 
 .interact-button {
-    background-image: url("/img/ui/continuet0.png");
+    user-select: none;
+    -moz-user-select: none;
+    background-image: url("img/ui/continuet0.png");
+    color: rgba(0, 0, 0, 0) !important;
+}
+.interact-button:hover {
+    background-image: url("img/ui/continuet1.png") !important;
     color: rgba(0, 0, 0, 0) !important;
 }
 

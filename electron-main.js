@@ -7,12 +7,13 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     autoHideMenuBar: true,
     frame: false,
-    //maximizable: true,
+    maximizable: true,
     width: 1920,
     height: 1080,
     resizable: false,
     fullscreenable: true,
     webPreferences: {
+      webSecurity: false,
       preload: path.join(__dirname, "electron-preload.js"),
     },
   });
@@ -30,7 +31,7 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow();
-  //mainWindow.maximize();
+  mainWindow.maximize();
 
   app.on("activate", function () {
     // On macOS it's common to re-create a window in the app when the
