@@ -3,6 +3,7 @@ main:
     set data.hasFirstaid false
     set_screen title
     clear_dialog
+    play music maintheme
     "WILL THIS BITTER NIGHT BRING CHANGE?"
     "or"
     "TWO WOMEN IN TROUBLE"

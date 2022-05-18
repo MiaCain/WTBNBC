@@ -1,4 +1,5 @@
 opener1:
+    stop music
     set_screen interl1
     clear_dialog
     "Part 1"

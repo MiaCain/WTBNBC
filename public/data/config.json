@@ -35,6 +35,19 @@
     "tea3": "img/backgrounds/06_dream03.png",
     "river1": "img/backgrounds/07_river01.png",
     "river2": "img/backgrounds/07_river02.png",
+    "river3a": "img/backgrounds/07_river03Neutral.png",
+    "river3b": "img/backgrounds/07_river03Angry.png",
+    "river4": "img/backgrounds/07_river04.png",
+    "river5": "img/backgrounds/07_river05.png",
+    "river6a": "img/backgrounds/07_river06best.png",
+    "river6b": "img/backgrounds/07_river06neut.png",
+    "river6c": "img/backgrounds/07_river06worst.png",
+    "hollow1": "img/backgrounds/08_dream01.png",
+    "hollow2": "img/backgrounds/08_dream02.png",
+    "hollow3": "img/backgrounds/08_dream03.png",
+    "end1": "img/backgrounds/09_ending01.png",
+    "end2": "img/backgrounds/09_ending02.png",
+    "end3": "img/backgrounds/09_ending03.png",
     "blank": "img/backgrounds/blank.png",
     "error": "img/backgrounds/error.png"
   },
@@ -87,6 +100,19 @@
     "tea3": {"background": "tea3"},
     "river1": {"background": "river1"},
     "river2": {"background": "river2"},
+    "river3a": {"background": "river3a"},
+    "river3b": {"background": "river3b"},
+    "river4": {"background": "river4"},
+    "river5": {"background": "river5"},
+    "river6a": {"background": "river6a"},
+    "river6b": {"background": "river6b"},
+    "river6c": {"background": "river6c"},
+    "hollow1": {"background": "hollow1"},
+    "hollow2": {"background": "hollow2"},
+    "hollow3": {"background": "hollow3"},
+    "end1": {"background": "end1"},
+    "end2": {"background": "end2"},
+    "end3": {"background": "end3"},
     "blank": {"background": "blank"},
     "error": {"background": "error"},
     "outro1": {"background": "narrat"}
@@ -128,6 +154,7 @@
       "data/ASetAttributes.rpy"
     ],
   "audio": {
+      "maintheme": {"loop": true, "src": "music/maintheme.mp3"},
       "stationblues": {"loop": true, "src": "music/stationblues.mp3"},
       "banquetsong": {"loop": true, "src": "music/banquetsong.mp3"},
       "forestsong": {"loop": true, "src": "music/forestsong.mp3"},
@@ -136,6 +163,8 @@
       "swampsong": {"loop": true, "src": "music/swampsong.mp3"},
       "empty": {"loop": true, "src": "music/empty.mp3"},
       "riverNice": {"loop": true, "src": "music/riverNice.mp3"},
-      "riverTense": {"loop": true, "src": "music/riverBad.mp3"}
+      "riverBad": {"loop": true, "src": "music/riverBad.mp3"},
+      "treedream": {"loop": true, "src": "music/treedream.mp3"},
+      "hornet": {"loop": true, "src": "music/hornetThrenody.mp3"}
   }
 }
