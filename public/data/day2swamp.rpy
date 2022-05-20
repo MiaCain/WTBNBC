@@ -66,23 +66,26 @@ day2swamp_cont:
             "You stay quiet."
     "You keep walking in silence for some time."
     "Thump, thump, thump, thump, thump. Your feet feel tired, squeezed into these boots, and you have to switch hands every now and then, the suitcase tugging at your wrist."
-    "Eventually, hornet slows her pace a little, and gazes into the mist."
+    "Eventually, Hornet slows her pace a little, and gazes into the mist."
     talk hrn talk "I'm glad you agreed to meet me at the Station, Emily, but..."
     "She struggles for a moment."
     talk hrn talk "What was it that made you finally agree? Why did you run away?"
     choice:
-        "Her eyes meet yours, and you look away after a momnet. Sudden fear wells inside you. What *was* it?"
+        "Her eyes meet yours, and you look away after a moment. Sudden fear wells inside you. What *was* it?"
         "'I couldn't stand them, my sister...'":
+            set data.OR.leaveReason 1
             talk em talk "I couldn't stand them, my sister..."
             "Your mother, too. And Pa. If she only knew half of what they..."
             "Before you can say more, Hornet nods."
             talk hrn talk "Ah. I understand."
             "There's a sort of pensive look about her now. You wonder if you should reach out and touch her, but the moment passes."
         "'I wanted to see something new.'":
+            set data.OR.leaveReason 2
             talk em talk "I wanted to see something new."
             add data.tensionPoints 1
             $if this.data.tensionPoints >= 4:
                 "A nasty look passes over her face for a brief second, then it's gone."
+                talk hrn talk "Like a tourist, huh?"
                 "You feel yourself flush. Just because you're not a factory worker doesn't mean she gets to..."
             talk hrn talk "Right. Well... Lots of trees, at least."
             talk hrn talk "Not that those are unheard of in *your* part of the city."
@@ -90,6 +93,7 @@ day2swamp_cont:
             "She walks a little faster. Conversation over."
         "'I wanted to get rid of this god-awful feeling.'":
             talk em talk "I wanted to get rid of this god-awful feeling."
+            set data.OR.leaveReason 3
             "Hornet smiles."
             add data.tensionPoints -1
             talk hrn talk "Reference is vulgar, you know."

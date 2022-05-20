@@ -1,11 +1,13 @@
 ASetAt_Tension_High:
     set_screen error
     set data.tensionPoints 10
+    set data.OR.cityfeeling 3
     talk pa talk "Tension set to 10"
 
 ASetAt_Tension_Low:
     set_screen error
     set data.tensionPoints 0
+    set data.OR.cityfeeling 1
     talk pa talk "Tension set to 0"
 
 ASetAt_Score_High:

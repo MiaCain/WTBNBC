@@ -133,7 +133,7 @@ day2dream_worse:
             "Hornet would be nothing without you. But she's going to do this to you?"
             "You even paid her fucking rent when she had that cold."
             "Rage flares in your stomach."
-            "Hatred"
+            "Hatred,"
             "and bitter fear."
             set_screen blank
             stop music

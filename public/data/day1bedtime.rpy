@@ -23,8 +23,13 @@ day1bedtime:
     "Emily pushes her baggage next to yours, and peeks inside the hollow."
     talk em talk "It looks dry... dirty though..."
     "You sigh, and begin taking off your coat."
-    talk hrn talk "Fine, just, take it. You'll be warmer with it anyway."
-    talk em talk "O-oh. That's a good idea!"
+    $if this.data.tensionPoints > 2:
+        talk hrn talk "Look, just, take it. You'll be warmer and we can't afford you getting sick."
+        talk em talk "Oh. That's a good idea."
+    else:
+        talk hrn talk "Here. Take this, Emily, I don't need it."
+        talk em talk "O-oh! Thank you, Hornet!"
+        "She does you the dignity of looking sheepish. She really should have brought one..."
     "She slips it on, then climbs inside the hollow."
     "There's not room for both of you. You perch on the precipice, quietly annoyed. Did she never learn to say thank you?"
     $if this.data.OR.bagmention:

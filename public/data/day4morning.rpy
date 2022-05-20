@@ -1,7 +1,6 @@
 day4morning:
     #MISSING
-    #AUDIOMISSING
-    play music empty
+    play music rainsong
     set_screen end1
     "The final day brings heavy rainfall."
     "Hornet has a slight fever, but says they should move on. She refuses to take the jacket back,"

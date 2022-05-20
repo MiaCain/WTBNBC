@@ -10,8 +10,16 @@ day1forest_offramp:
             talk hrn talk "Those heels too, actually..."
             "Emily gives you an irritated look."
             "Familiar. Copper in your mouth."
-            talk em talk "Shut up, Hornet. I can deal with it myself."
-            "The air between you becomes bitter."
+            $if this.data.tensionPoints < 1:
+                talk em talk "Can you not nag me?"
+                talk em talk "I know what I'm doing."
+                "Suddenly, the air between is tinged with bitterness. And just when you were having a nice time, too..."
+                "You wonder if it was a good idea to bring Emily."
+            else:
+                talk em talk "Shut up, Hornet. I can deal with it myself."
+                "The air between you becomes bitter."
+                "A familiar feeling, at least."
+                "You wonder if it was a good idea to bring Emily."
             set data.OR.bagmention true
             add data.tensionPoints 1
             jump day1forest_cityview
@@ -26,7 +34,7 @@ day1forest_cityview:
     set_screen offramp3
     talk hrn talk "The City."
     talk em talk "It looks so tiny from here..."
-    "You couldn't disagree more. It fills the entire horizon. It's dead night, but the City still glows. Angry neon. It sreeches at the sky."
+    "You couldn't disagree more. It fills the entire horizon. It's dead night, but the City still glows. Angry neon. It screeches at the sky."
     "Traffic roaring, even all the way up here."
     "The railway heads to the station where you departed. Along the tracks, the inner city fades into crowded suburbs, which eventually dissolve altogether."
     "Not so in the other directions; hill upon hill reach out into the darkness, grids of electric light imposed upon them by the metropole."
@@ -50,7 +58,7 @@ day1forest_cityview:
             set data.OR.cityfeeling 1
             talk hrn talk "Sad, I suppose. Lots of... bad stuff in there."
             talk hrn talk "All those empty buildings, all that bad air..."
-            "Emily frowns a little at your answer."
+            "Emily frowns at your answer."
             talk em talk "Ah, I see."
             "You decide to move on."
             jump day1forest_trees
@@ -79,7 +87,7 @@ day1forest_trees:
     set_screen blank
     "The city is still reeling through your head. Thinking about it, you remember a slogan sprayed on a concrete wall by the canal off of Metternich Square. It said..."
     "'IT'S KILLED AL L OF IT/"
-    "EVEN THE STARS'"
+    "EVeN THE S TARS'"
     "Whoever wrote it wasn't wrong. There isn't a single star visible tonight. Even the moon, which you've seen on a good night now and then- (when getting kebabs with coworkers after a late shift)"
     "-is nowhere at all. Its dreadful to think about."
     "You suppose the City was never as bad for Emily in her family's polyceramic high-rise as it was for you. If it wasn't for the Section getting passed, she might never have-"
@@ -90,7 +98,7 @@ day1forest_trees:
     choice:
         "Emily shivers."
         "(Offer her your coat, quietly)":
-            "You gesture at your coat, and raise a brow at Emily."
+            "You open your coat, showing Emily your warm sweater and scarf, raising your brow as a silent question."
             $if this.data.OR.bagmention:
                 "She shoots you a reproachful look, then keeps moving. You feel a little bad."
                 set data.FORhasCoat false

@@ -1,6 +1,8 @@
 main:
     set data.OR.bagmention false
     set data.hasFirstaid false
+    set data.OR.leaveReason 1
+    set data.OR.cityfeeling 0
     set_screen title
     clear_dialog
     play music maintheme

@@ -67,7 +67,6 @@ intro1_hesitate:
                 "She's right. You have no idea where you're going."
                 "(Let her continue)":
                     set data.letGetSoda true
-                    add data.tensionPoints -1
                     "She considers for a moment, then presses in two worn little metal buttons. She slots the coin into the automaton."
                     "After an agonizing while the mechanism picks an aluminium can out of the array, and drops it with a heavy clank into the retrieval slot."
                     "Emily bends over and her long fingers slip past the plastic flap."
@@ -154,7 +153,7 @@ intro1_leave:
     talk hrn talk "I don't know... I don't know..."
     "Running away was supposed to be liberatory and exciting. Have you already hit a dead end?"
     choice:
-        "You feel panic rising in your chest."
+        "The feeling grows stronger. Tightness, panic rising."
         "'We have to head away from the City!'":
             talk hrn talk "We have to head away from the City!"
             talk em talk "Yes, we do..."

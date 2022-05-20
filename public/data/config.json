@@ -165,6 +165,7 @@
       "riverNice": {"loop": true, "src": "music/riverNice.mp3"},
       "riverBad": {"loop": true, "src": "music/riverBad.mp3"},
       "treedream": {"loop": true, "src": "music/treedream.mp3"},
+      "rainsong": {"loop": true, "src": "music/rainsong.mp3"},
       "hornet": {"loop": true, "src": "music/hornetThrenody.mp3"}
   }
 }
