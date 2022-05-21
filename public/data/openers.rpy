@@ -2,12 +2,13 @@ opener1:
     stop music
     set_screen interl1
     clear_dialog
+    " "
     "Part 1"
     set_screen interl1p
-    talk poet talk "'IN THE EVENING LIES THE CITY DULL AND BROWN,"
-    talk poet talk "GREY ODOUR PERMEATES THE AIR"
-    talk poet talk "THE THUNDER OF A TRAIN ON THE BRIDGE"
-    talk poet talk "AND SPARROWS FLUTTERING OVER HEDGE AND FENCE'"
+    talk poet talk "'EVENINGS THE CITY LIES DULL AND BROWN,"
+    talk poet talk "THE AIR PERMEATED BY GREY ODOUR"
+    talk poet talk "THE THUNDER OF A TRAIN FROM THE BRIDGE"
+    talk poet talk "AND OVER HEDGE AND FENCE FLUTTER SPARROWS'"
     "    - Georg Trakl"
     jump intro1
 

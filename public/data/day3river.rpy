@@ -78,7 +78,7 @@ day3river_walk:
     "The shore is quiet."
     "The river, straightened as it is, makes very little noise; there's a rhythmic growl where it laps at the boulders, but that's all."
     "To your right is a dense wall of tall trees, seemingly culled from the path long ago. It is mirrored across the river, though the air is too hazy to tell whether there's another path there."
-    "You can't see much of anything in the distance- no bridges or boats, though there is a gentle curve near the horizon that might obscure something."
+    "You can't see much of anything in the distance- no bridges or boats, though there is a curve near the horizon that might obscure something."
     $if this.data.tensionPoints > 2:
         "Your feet hurt badly. Your wrist too; like it or not, Hornet was right when she told you to bring a backpack. You can feel a cramp deep inside your arm, far more painful than that cut."
     "There's a gentle wind, and occasional birdsong."
@@ -91,9 +91,69 @@ day3river_walk:
     else:
         $if this.data.score > 2:
             "peach pits."
-            #"Hornet and Emily discuss why they REALLY left the city. 'to be with you' option that doesnt say LIE next to it."
+            "It's a neutral smell. Not great, but sort of... homely."
+            "After some time walking, Hornet slows down, and looks at you."
+            talk hrn talk "I suppose I never told you why I wanted to leave the City, huh?"
+            talk em talk "No..."
+            $if this.data.OR.leaveReason == 1:
+                talk hrn talk "Well, you left because of your family..."
+                "You nod, thinking back to the admonissions. The night of sobbing you endured when your sister told Mother, about Hornet and..."
+                "You shake the memory aside."
+            $if this.data.OR.leaveReason == 2:
+                talk hrn talk "Well, you left because of... You had your reasons."
+                "Something plays across Hornet's face as she recalls your answer."
+            $if this.data.OR.leaveReason == 3:
+                talk hrn talk "Well, you left because of the... The feeling, you said."
+                "So many sleepless nights. So much time looking down at all the winding suprastructures. The great concrete circuit... Hornet lost somewhere within, crushing her life to powder in a warehouse..."
+            talk hrn talk"But I just feel like..."
+            $if this.data.OR.cityfeeling == 1:
+                talk hrn talk "Well. I know I said I *said* I felt sad about it. When we were looking down at it."
+            $if this.data.OR.cityfeeling == 2:
+                talk hrn talk "I said earlier I felt nostalgic about it... When we were looking down at it, I mean."
+            $if this.data.OR.cityfeeling == 3:
+                talk hrn talk "I... I know I said I hated it."
+                "That wasn't nice of her, no. Though you can see why she felt that way. To a degree."
+                talk hrn talk "When we were looking down at it there, I did feel that way, but..."
+            $if this.data.OR.cityfeeling == 0:
+                talk hrn talk "I couldn't really think of something to say earlier. When we were looking down at it. I just wanted to get out of dodge, you know?"
+            talk hrn talk "Only now, thinking about it that isn't quite right. I..."
+            "She smiles."
+            talk hrn talk "I guess I left for you, Emily. And for myself."
+            talk hrn talk "Leaving for you *was* selfish, in a way. I... I know the road's been hard, but... we're walking it together, right?"
+            "You feel a dampness on your cheek. You lean in to embrace her."
+            "...a long moment passes."
+            talk hrn talk "Are you okay?"
+            talk em talk "Y-yeah. Sorry."
+            "You remember your dreams... They almost feel foolish now. Say it."
+            choice:
+                talk pa talk "Don't say it. It'll hurt more if you do."
+                "'I love you, Hornet.'":
+                    talk em talk "I love you, Hornet."
+                    set data.LOVE 1
+                    "It seems to take her a moment, before she says,"
+                    talk hrn talk "Love you too, Emily."
+                    "Your heart is pounding."
+                    "Hornet pulls your face down and kisses you."
+                    "You haven't kissed since the fight, since before you agreed to come to the train."
+                    "She lingers for a long moment, and you feel yourself turning into a nervous animal in her hands."
+                    "When she pulls away, your hands are shaking."
+                    talk hrn talk "Let's keep walking, okay?"
+                    "You glance at the distance. It doesn't seem so far, now... And is that a flash of light, some pale structure...?"
+                    talk em talk "O-okay, Hornet."
+                    "Your heart is still thumping away at your chest. Did you do the right thing?"
+                "'Thank you, Hornet.'":
+                    talk em talk "Thank you, Hornet."
+                    set data.LOVE 2
+                    "She smiles again, and kisses your cheek."
+                    talk hrn talk "Thank you, too. For coming with me."
+                    talk hrn talk "Speaking of..."
+                    "She looks over her shoulder, at the long road ahead. You think you see the light catch something, a brief white flash in the distance."
+                    talk hrn talk "We should keep going. We need to find a shelter."
+                    talk em talk "Yes. Let's..."
+                    "Your heart is pounding. Did you do the right thing?"
             jump day3river_noargue
         "burnt paper."
+        "Not a good smell, but you suppose it could be worse."
         "After some time walking, Hornet slows down, and looks at you."
         talk hrn talk "I suppose I never told you why I wanted to leave the City, huh?"
         talk em talk "No..."
@@ -169,7 +229,7 @@ day3river_walk:
             "You feel your gut tighten. Not this again..."
             talk hrn talk "The streets. Endless rows of them. The blocks so high you couldn't see the sky sometimes. The stink of sewage on the morning commute..."
             talk hrn talk "After my brother died,"
-            "What!? You didn't know she had a brother!"
+            "What..? You didn't know she had a brother..."
             talk hrn talk "well... there's no way to change it now. But I'm not going to go like that."
             talk hrn talk "I've seen rats... in traps. They try to gnaw their way out. That's I'm doing, you get it?"
             "She's opening and closing her fist."
@@ -204,8 +264,43 @@ day3river_walk:
                             add data.tensionPoints 1
                             jump day3river_argue
         $if this.data.OR.cityfeeling == 0:
-            #empty
-
+            talk hrn talk "I..."
+            "she thinks about her answer for some time."
+            talk hrn talk "I couldn't stand it in there. I mean..."
+            talk hrn talk "neither could you, I guess. But it was almost... boring. So tedious. Days and days and days of work. No future."
+            "You're about to respond, but she cuts in,"
+            talk hrn talk "And I mean *no* future. I know you were raised on your... *diet* of aspirations and all that. That anyone can hope to have what you had."
+            talk hrn talk "But that's just more... crystal screens. Just another graphic slogan on a magazine. Does that make sense?"
+            choice:
+                "You can see her desperately wanting to make you understand now."
+                "'Things could have gotten better...'":
+                    talk em talk "Things could have gotten better..."
+                    "she laughs."
+                    talk hrn talk "Ha. I guess? I was always hearing that, but... I had a brother. He's..."
+                    talk hrn talk "he's not around anymore. The city took him, you know? And now, that..."
+                    talk em talk "the Section."
+                    talk hrn talk "That obscenity, yeah. Now that it's in... There really is no future. Not for me, I don't think."
+                    "Maybe not even for you."
+                    "Hornet is shaking a little."
+                    choice:
+                        "(Embrace her)":
+                            "You pull her into a hug."
+                            "You can't tell, but you think she might appreciate it..?"
+                            "She wipes a sleeve across her face after."
+                            talk hrn talk "Thanks, Emily."
+                            "She turns her face quickly."
+                            "Did you do the right thing...?"
+                        "'You did the right thing.'":
+                            talk em talk "You did the right thing."
+                            "You smile at her."
+                            talk hrn talk "But..."
+                            talk em talk "There's no way you staying there would have made anything better"
+                            talk em talk "Plus we haven't gotten caught yet, and..."
+                            talk em talk "we still have each other."
+                            "That seems to cheer her."
+                            talk hrn talk "Th-thanks, Emily..."
+                            add data.tensionPoints -1
+                            add data.score 1
         set_screen river3a
     #"Hornet and Emily discuss why they REALLY left the city.
     jump day3river_argue
@@ -226,7 +321,13 @@ day3river_argue:
 
 day3river_noargue:
     set_screen river3a
-    #MISSING
-    "Hornet says she's glad to be out of the swamp."
-    "She hopes you're having an easier time with the suitcase on the asphalt."
+    "The walk continues in mostly amicable silence."
+    "You can't stop glancing at Hornet now. A lazy smile plays across her lips occasionally... She's never smiled much, and it's nice to see."
+    "The wind picks up some of her hair and plays with it. She brushes strands of it from her face absent-mindedly."
+
+    talk hrn talk "I'm glad to be out of the swamp. This is... Nice."
+    talk em talk "Almost like a hike!"
+    "That makes her laugh, though you don't quite get the joke."
+    "She says she hopes the asphalt is easier on your suitcase, and your stomach tightens up. But then you realise she really means it."
+    "In time..."
     jump day3bedtime

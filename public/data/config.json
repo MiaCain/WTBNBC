@@ -37,6 +37,7 @@
     "river2": "img/backgrounds/07_river02.png",
     "river3a": "img/backgrounds/07_river03Neutral.png",
     "river3b": "img/backgrounds/07_river03Angry.png",
+    "river3c": "img/backgrounds/07_river03Neutral.png",
     "river4": "img/backgrounds/07_river04.png",
     "river5": "img/backgrounds/07_river05.png",
     "river6a": "img/backgrounds/07_river06best.png",
@@ -102,6 +103,7 @@
     "river2": {"background": "river2"},
     "river3a": {"background": "river3a"},
     "river3b": {"background": "river3b"},
+    "river3c": {"background": "river3c"},
     "river4": {"background": "river4"},
     "river5": {"background": "river5"},
     "river6a": {"background": "river6a"},
@@ -148,7 +150,6 @@
       "data/day3bedtime.rpy",
       "data/day3dream.rpy",
       "data/day4morning.rpy",
-      "data/day4evening.rpy",
       "data/day4noon.rpy",
       "data/outro1.rpy",
       "data/ASetAttributes.rpy"
