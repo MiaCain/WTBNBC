@@ -1,5 +1,8 @@
 main:
     set data.OR.bagmention false
+    set data.FORhasCoat false
+    set data.tensionPoints 0
+    set data.score 0
     set data.hasFirstaid false
     set data.OR.leaveReason 1
     set data.OR.cityfeeling 0
