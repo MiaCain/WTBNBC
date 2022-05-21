@@ -22,6 +22,7 @@ day2bedtime_firstaid:
                     "You thrust out your hand, wincing. The wound has stopped bleeding, becoming a thin brownish line. It feels terrible. You begin imagining yourself with only one hand, or even one arm..."
                     "Hornet looks suddenly very irritated, only glancing at the gash."
                     talk hrn talk "No. Suck on your scratch if you like, this is serious."
+                    set data.ScratchFight true
                     "She moves away from you."
                     talk hrn talk "There's bandages in here."
                     "She rummages in the case and shows you an aluminium tube."
@@ -42,6 +43,7 @@ day2bedtime_firstaid:
                     talk hrn talk "What? What for?"
                     "Hornet has slipped the plastic case out of its slot, and is opening it."
                     talk em talk "My cut!"
+                    set data.ScratchFight true
                     "You thrust out your hand, wincing. The wound has stopped bleeding, becoming a thin brownish line. It feels terrible. You begin imagining yourself with only one hand, or even one arm..."
                     "Hornet looks suddenly very irritated, only glancing at the gash."
                     talk hrn talk "What? There's nothing-"

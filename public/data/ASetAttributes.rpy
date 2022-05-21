@@ -1,5 +1,6 @@
 ASetAt_Tension_High:
     set_screen error
+    set data.ScratchFight true
     set data.tensionPoints 10
     set data.score 0
     set data.OR.cityfeeling 3

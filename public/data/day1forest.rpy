@@ -167,7 +167,7 @@ day1forest_cont:
                 add data.score 1
             "(Embrace her)":
                 "You pull her into a hug. She silently shivers, some tension going out of the lanky girl."
-                "Warm girl..."
+                "Emily's always liked physical attention more than you."
                 "The moment passes. You think you see her smile as you move on."
                 add data.score 1
         "Comforted, you keep trecking into the woods..."

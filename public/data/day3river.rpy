@@ -88,6 +88,26 @@ day3river_walk:
     $if this.data.tensionPoints > 4:
         "styrofoam."
         "It's a toxic smell. It digs deep into your nostrils, seeming to fill your every breath with that fine powder. You hope it isn't bad for you..."
+        "Hornet seems to think about something. But when she glances at you, she seems to think better than to tell you."
+        talk em talk "What is it?"
+        talk hrn talk "Nothing. Save your breath."
+        $if this.data.OR.cityfeeling == 0:
+            "There's a disinterested air about her."
+        $if this.data.OR.cityfeeling == 1:
+            "There's a slight sadness to her."
+            "You sort of wish things were different..."
+            $if this.data.bagmention:
+                "Then you remember her constant nettling."
+                $if this.data.ScratchFight:
+                    "Not to mention that deal with your cut. Your hand throbs. Is it already infected?"
+                "Yeah, screw you, Hornet."
+            else:
+                "Then you remember that attitude she's so ready with..."
+                $if this.data.ScratchFight:
+                    "Not to mention that deal with your cut. Your hand throbs. Is it already infected?"
+                "Yeah, screw you, Hornet."
+        "She keeps walking, and you follow, a pace or two behind her."
+        jump day3river_argue
     else:
         $if this.data.score > 2:
             "peach pits."
@@ -279,7 +299,7 @@ day3river_walk:
                     talk hrn talk "Ha. I guess? I was always hearing that, but... I had a brother. He's..."
                     talk hrn talk "he's not around anymore. The city took him, you know? And now, that..."
                     talk em talk "the Section."
-                    talk hrn talk "That obscenity, yeah. Now that it's in... There really is no future. Not for me, I don't think."
+                    talk hrn talk "That obscenity, yeah. Now that it's in place... There really is no future. Not for me, I don't think."
                     "Maybe not even for you."
                     "Hornet is shaking a little."
                     choice:
@@ -302,25 +322,118 @@ day3river_walk:
                             add data.tensionPoints -1
                             add data.score 1
         set_screen river3a
-    #"Hornet and Emily discuss why they REALLY left the city.
     jump day3river_argue
 
 day3river_argue:
-    play music riverBad
-    set_screen river3a
-    #MISSING
-    "Emily comments on the trees, hoping there are fruits."
-    "This confuses Hornet, who doesn't know fruits come from trees. It spirals into an argument, unless the player has low enough tension to see the good options."
-    $if this.data.tensionPoints > 5:
-        set_screen river3b
-        "Hornet is getting very angry."
+    $if this.data.tensionPoints > 2:
+        "You walk on."
+        "The trees to your right rustle and sway in the wind, and a cloud of dust drifts from the lowest branches."
+        choice:
+            "It gives you a thought..."
+            "'I wonder if we'll find any fruit.'":
+                talk em talk "I wonder if we'll find any fruit."
+                "Hornet scowls."
+                "Her face is already sort of splotchy and red. She's very irritated."
+                set_screen river3b
+                play music riverBad
+                talk hrn talk "What?"
+                talk em talk "Fruit."
+                "You point up at the trees. Hornet looks like you've gone insane."
+                talk hrn talk "You think we'll find a supermarket up there?"
+                choice:
+                    "Oh. Is it possible..."
+                    "'Hornet, do you not know where fruit comes from?'":
+                        talk em talk "Hornet, do you not know where fruit comes from?"
+                        "She goes bright red."
+                        talk hrn talk "Is it..."
+                        "She knows she doesn't."
+                        $if this.data.tensionPoints > 4:
+                            talk em talk "Wow Hornet, you should have paid more attention in school."
+                            add data.tensionPoints 2
+                            "She freezes. There's something jovial in your voice. You can't stop yourself."
+                            talk em talk "Didn't your parents teach you anything, Hornet? Fruit comes from *trees,* you fucking *child.*"
+                            "The look on her face is very satisfying."
+                            $if this.data.OR.bagmention:
+                                "Especially after that shit she pulled with your bag. Who's laughing now?"
+                            "Your cut is hurting less already."
+                            set_screen blank
+                            "Hornet turns her face away, and hurries ahead several paces. You don't rush to keep up, quietly enjoying your victory. You think you hear her gasping."
+                            jump day3bedtime
+                        choice:
+                            talk hrn talk "I thought they made it."
+                            "Taunt her":                            
+                                talk em talk "Wow Hornet, you should have paid more attention in school."
+                                add data.tensionPoints 3
+                                add data.score -1
+                                "She freezes. There's something jovial in your voice. You can't stop yourself."
+                                talk em talk "Didn't your parents teach you anything, Hornet? Fruit comes from *trees,* you fucking *child.*"
+                                "The look on her face is very satisfying."
+                                $if this.data.OR.bagmention:
+                                    "Especially after that shit she pulled with your bag. Who's laughing now?"
+                                "Your cut is hurting less already."
+                                set_screen blank
+                                "Hornet turns her face away, and hurries ahead several paces. You don't rush to keep up, quietly enjoying your victory. You think you hear her gasping."
+                            "Be nice":
+                                "In the least condescending voice you can muster, you explain to her how fruit is grown."
+                                "She seems very embarrassed, but at least you're not taunting her."
+                                talk hrn talk "So you think there could be some... Wild fruit, here?"
+                                talk em talk "I hope so, at least."
+                                "It isn't likely. But anything's possible out here."
+                                add data.tensionPoints -1
+                        jump day3bedtime
+        jump day3bedtime
     else:
-        "Hornet is merely disappointed."
+        "You walk on."
+        "The trees to your right rustle and sway in breeze, and a fine cloud of dust drifts from the lowest branches."
+        choice:
+            "It gives you a thought..."
+            "'I wonder if we'll find any fruit.'":
+                talk em talk "I wonder if we'll find any fruit."
+                "Hornet slows, looks over at you."
+                set_screen river3a
+                talk hrn talk "What, sorry?"
+                talk em talk "Fruit."
+                "You point up at the trees. Hornet looks blank."
+                talk hrn talk "You think we'll find a supermarket up there?"
+                choice:
+                    "Oh. Is it possible..."
+                    "'Hornet, do you not know where fruit comes from?'":
+                        talk em talk "Hornet, do you not know where fruit comes from?"
+                        "She goes bright red."
+                        talk hrn talk "Is it..."
+                        "She knows she doesn't."
+                        choice:
+                            talk hrn talk "I thought they made it."
+                            "Taunt her a little":                            
+                                talk em talk "Wow Hornet, you should have paid more attention in school."
+                                add data.tensionPoints 1
+                                "She looks hurt."
+                                talk hrn talk "Emily, you know that isn't funny."
+                                "Immediately you feel bad"
+                                talk em talk "Oh. I'm sorry Hornet."
+                                "Shit. How do you get out of this one?"
+                                "Your cut hurts, suddenly."
+                                talk em talk "I was..."
+                                talk em talk "Uh. Fruit. It. It's grown, in trees. Like leaves."
+                                "It takes her a moment, then she raises her eyebrows, beckoning you on."
+                                talk em talk "I was... trying to make a joke. I'm sorry Hornet."
+                                "She takes a deep breath."
+                                talk hrn talk "I see."
+                                talk hrn talk "Don't... Joke about that again. And... yeah, food would be nice."
+                                "She starts moving again. You hurry along, feeling yourself go red."
+                            "Be nice":
+                                "You explain to her how fruit is grown."
+                                "She seems very embarrassed, but listens."
+                                talk hrn talk "So you think there could be some... Wild fruit, here?"
+                                talk em talk "I hope so, at least."
+                                "It isn't likely. But anything's possible out here."
+                                add data.tensionPoints -1
+                        jump day3bedtime
     jump day3bedtime
 
 
 day3river_noargue:
-    set_screen river3a
+    set_screen river3c
     "The walk continues in mostly amicable silence."
     "You can't stop glancing at Hornet now. A lazy smile plays across her lips occasionally... She's never smiled much, and it's nice to see."
     "The wind picks up some of her hair and plays with it. She brushes strands of it from her face absent-mindedly."

@@ -68,12 +68,12 @@ day3dream:
     talk poet talk "Emily is dead. Long live Emily."
     "A great terror takes hold, then subsides, like a wave."
     choice:
-        "Say it with me. This is it."
-        "This is it.":
+        "Say it with me, both of you. This is it."
+        "'This is it.'":
             talk emdrm talk "THIS IS IT."
             choice:
                 "The Power and the Glory."
-                "The Power and the Glory.":
+                "'The Power and the Glory.'":
                     talk emdrm talk "THE POWER AND THE GLORY."
                     "She's very close now."
                     "Have you already heard her?"
@@ -94,7 +94,7 @@ day3dream:
     $if this.data.LOVE == 1:
         "Her kiss was so lovely... There will be a thousand more, and she will never feel pain..."
     $if this.data.LOVE == 2:
-        "You didn't tell her you loved her earlier. This will speak louder than a thousand words."
+        "You didn't tell her you loved her earlier. This, however, will speak louder than a thousand words."
     choice:
         "Do it."
         "Raise the water...":
@@ -102,5 +102,6 @@ day3dream:
     stop music
     set_screen blank
     "and drinks from the pool."
+    "The water is so cold."
     "The dream fades, and deep sleep takes its place."
     jump day4morning
