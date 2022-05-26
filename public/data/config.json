@@ -56,6 +56,7 @@
     "end7b": "img/backgrounds/09_ending07b.png",
     "endGood": "img/backgrounds/09_endingGOOD.png",
     "endMid": "img/backgrounds/09_endingMID.png",
+    "endBad": "img/backgrounds/09_endingBAD.png",
     "blank": "img/backgrounds/blank.png",
     "error": "img/backgrounds/error.png"
   },
@@ -129,6 +130,7 @@
     "end7b": {"background": "end7b"},
     "endGood": {"background": "endGood"},
     "endMid": {"background": "endMid"},
+    "endBad": {"background": "endBad"},
     "blank": {"background": "blank"},
     "error": {"background": "error"},
     "outro1": {"background": "narrat"}

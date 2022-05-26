@@ -33,8 +33,13 @@ day3bedtime:
         "There's food back in the City..."
         "You try to forget the thought."
     "You make your makeshift bed and open the book you brought."
-    "It's a modern romance novel, about a rat who falls in love with a white fox in a church."
-    "You read, and Hornet heads outside to climb the building."
+    $if this.data.tensionPoints > 1:
+        "Not a single word stays in your head, however. You're keyed up, distracted."
+        "You start thinking about throwing the book in the river."
+    else:
+        "It's a modern romance novel, about a rat who falls in love with a white fox in a church."
+        "It's calming."
+    "Hornet heads outside to climb the building."
     $if this.data.tensionPoints <3:
         talk em talk "Be careful!"
         talk hrn talk "Of course I will!"

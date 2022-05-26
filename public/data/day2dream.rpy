@@ -7,8 +7,29 @@ day2dream:
         else:
             jump day2dream_bad
 
-    
 day2dream_bad:
+    play music teasong
+    set_screen tea2a
+    set data.dreamDogEat false
+    "You're in a robe."
+    talk poet talk "It's making you uncomfortably hot."
+    talk poet talk "The air in here is humid and heavy, feeling far too cramped."
+    talk poet talk "Every surface is covered in tchotchkes. Every wall is hung with rugs, and the floor has many of them, and cushions."
+    talk poet talk "The room turns to fog a few yards away, thick and roiling fog, light grey oblivion swallowing the polished cabinet and its many glasses."
+    choice:
+        talk poet talk "That cabinet is behind you, to your right-"
+        "Left.":
+            talk poet talk "-of course. It's to your left."
+            "Not that that means much here."
+    talk poet talk "Across it is the window."
+    talk pa talk "Don't look. Not now."
+    talk poet talk "Try to ignore it."
+    "There are dogs all around you. Many of them, in figures, carved onto furniture, woven into pillows, painted on plates."
+    talk poet talk "Each and every one of them faces away from you, seeming all to have forgotten you."
+    talk poet talk "They trudge home,"
+    talk poet talk "to their masters."
+    
+day2dream_badOld:
     play music teasong
     set_screen tea2a
     set data.dreamDogEat false
@@ -86,7 +107,6 @@ day2dream_bad:
                     "You set down the cup. The mist obscures the reflection, but your hand is shaking, and some tea scalds and burns you, soaking into your robe. It clings to your skin, burning it,"
                     "You feel a scream catching in your thr"
                     jump day2dream_wake
-
 
 day2dream_worse:
     set data.dreamDogEat true

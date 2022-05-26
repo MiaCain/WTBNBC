@@ -144,15 +144,15 @@ day4noon_outside:
         choice:
             "You creep closer. Nestled inside is a tiny animal - a fawn, newborn. White spots dapple its back."
             "(Reach in)":
-                "You reach in, and fasten a golden ribbon about its neck."
-                "It stirs in its sleep, content."
+                "You reach in,"
+                "and fasten a golden ribbon about its neck."
         stop music
         set_screen interl2
         clear_dialog
         " "
         "..."
         "GOOD END"
-        jump outro 1
+        jump outro1
 
     else:
         "You wonder if you could have done more for her."
@@ -161,7 +161,7 @@ day4noon_outside:
         "You step back inside."
         play music hornet
         set_screen end5
-        "The smell has gotten no less upsetting."
+        "The smell has become no less upsetting."
         "Hornet seems to be awake. You gingerly step to her side, and touch her cheek. She looks up at you."
         talk hrn talk "Emily... You came back..."
         "Her cheeks are wet with sweat."
@@ -214,14 +214,17 @@ day4noon_outside:
         " "
         "..."
         "NEUTRAL END"
-        jump outro 1
+        jump outro1
 
 day4_endBad:
-    set_screen blank
+    set_screen end1
+    play music rainsong
     "You can't do this anymore."
     "You realise that as you stare outside into the rain."
     "You need to go back. You're Emily. You have a home. You don't need this rat or her grand ideas, or her constant holier-than-though proselityzing. Just because you're not from the machining district..."
     "She doesn't even know where FRUIT comes from. You feel churning in your stomach."
+    "Then..."
+    set_screen endBad
     talk emdrm talk "WHY ARE YOU STILL STANDING HERE?"
     choice:
         talk emdrm talk "RUN."
