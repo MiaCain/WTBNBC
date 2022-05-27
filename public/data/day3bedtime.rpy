@@ -57,6 +57,10 @@ day3bedtime:
         set data.sleepstatus 1
         "Hornet lies down by your side, and you stroke her palm for a while. The light fades."
         "You don't need words now."
+        $if this.data.LOVE == 0:
+            "You realise you love her. Does she love you too? She's right next to you, you can feel her chest rise and fall..."
+            set this.data.LOVE 2
+            "The question chases itself around in your mind."
         "It's nice, having her there. There's a comfortable stillness that falls over you, and her soft breathing makes you sleepy..."
         jump opener3
     else:

@@ -20,14 +20,68 @@ day2dream_bad:
         talk poet talk "That cabinet is behind you, to your right-"
         "Left.":
             talk poet talk "-of course. It's to your left."
-            "Not that that means much here."
+            "Not that those terms means much here."
     talk poet talk "Across it is the window."
     talk pa talk "Don't look. Not now."
     talk poet talk "Try to ignore it."
     "There are dogs all around you. Many of them, in figures, carved onto furniture, woven into pillows, painted on plates."
     talk poet talk "Each and every one of them faces away from you, seeming all to have forgotten you."
-    talk poet talk "They trudge home,"
-    talk poet talk "to their masters."
+    talk poet talk "They trod home,"
+    talk pa talk "heeling,"
+    choice:
+        talk poet talk "to their masters."
+        "Why am I in here?":
+            "You're always in here."
+            talk poet talk "No use pretending otherwise."
+        "When can I leave?":
+            "Whenever you want, I guess."
+            talk poet talk "Difficult to, though. You'd need to work very hard on it."
+            talk poet talk "You've not left it often. Running from the City was a good first step."
+            "But there's so far left to go. The mask on the cabinet ignores you, and yet..."
+            "it seems to look almost"
+            "disdainful."
+    "Something stirs in the mist."
+    talk poet talk "Is it time?"
+    talk poet talk "I believe it's time. And yes, there the knock comes,"
+    talk poet talk "and there the slender arm. The figure is slender and androgynous, with short hair."
+    "a curtain parts, and the figure passes down a fine china cup."
+    set_screen tea2a
+    "you take it,"
+    $if this.data.score >1:
+        "carefully."
+    else:
+        "spilling some droplets."
+        "It's scalding hot, even the saucer, and you're shaking. You bite your lip as pain flares up along your forearm."
+    "Your robe slips down to your wrist as you pull it closer."
+    "Herd animals leap in frozen panic, woven in and out of the thread in many colours."
+    "Something in you envies them their company... At least you have the robe."
+    "The cup is small, and decorated with faceless dogs. All of them look the other way, none deigning to even glance at you."
+    "You try to turn the cup, to force them into facing your way, but you only manage to spill some of the tea."
+    talk poet talk "It smells of fruit."
+    talk poet talk "Not in an appetizing way - in a dry, dusty way. Like apples and peaches about to go bad."
+    "The figure is gone, now, by the way. Thought I should mention."
+    choice:
+        talk poet talk "The saucer, now spattered with watery dark red droplets, depicts a dense forest. You try not to dwell on it."
+        "Drink some":
+            "You lean in- "
+            set_screen tea3
+            "-and freeze."
+            "It's Hornet again."
+            talk poet talk "No tigre now, oh no."
+            "This is almost worse. She's a great dark dog, slinking away from you through the night,"
+            "about to vanish into the mist."
+            "You feel panic take hold of you. Where is she going?"
+            "You try to call her name, but whether she hears you or not,"
+            "she's not stopping."
+            "She's running back to... to where?"
+            talk poet talk "where else?"
+            choice:
+                talk pa talk "...that Celice woman. That was her name."
+                "No!":
+                    "You try to stop her, to call her back"
+                    "But the dog vanishes, and the cup is filled only with ripples"
+                    "Why?"
+                    talk poet talk "And trembling so bad you almost spill it, you set it down on the floor, before"
     
 day2dream_badOld:
     play music teasong
@@ -99,8 +153,9 @@ day2dream_badOld:
             talk poet talk "She'll be dancing on her leash in no time."
             talk poet talk "She'll forget about you."
             talk poet talk "You feel hot tears on your cheek"
+            talk pa talk "You feel hot tears on your cheek"
             choice:
-                talk pa talk "Yoou feel hot tears on your cheek"
+                talk pa talk "Yoou    feel hot tears on your cheek"
                 "Why does she want to leave me?":
                     talk poet talk "You need to be better. If you drink now it'll happen, you just watch and see. you will wake up in one minute"
                     talk poet talk "alone"

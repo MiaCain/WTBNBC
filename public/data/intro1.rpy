@@ -59,6 +59,7 @@ intro1_hesitate:
     choice:
         "Emily's pale fingers tap on the clear plastic."
         "'What are you doing!?'":
+            add data.tensionPoints 1
             talk hrn talk "What are you doing!? We don't have time for this!"
             talk em talk "Look, I just..."
             "She appears to be having trouble deciding what to pick."
@@ -77,6 +78,7 @@ intro1_hesitate:
                         talk em talk "You want some?"
                         "(Yes)":
                             set data.hasSoda false
+                            add data.tensionPoints -1
                             talk hrn talk "Sure."
                             "She eagerly pops it open, and even lets you sip it first. It's achingly sweet and very cold indeed."
                             "The two of you take turns quietly sipping the drink. After a while, the can is empty."
@@ -119,7 +121,6 @@ intro1_hesitate:
                     "She drops the can into her case."
                     talk em talk "Let's get going, Hornet."
                     jump intro1_leave
-
                 "'Can I have some?'":
                     set data.hasSoda false
                     add data.tensionPoints -1

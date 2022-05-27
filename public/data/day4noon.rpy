@@ -87,8 +87,9 @@ day4noon_outside:
             "There was nothing you could do for her. You feel sick to your stomach."
             talk em talk "Why'd you have to drink that soda... Bandage that s-scratch... Stupid... Stupid rich girl..."
     "Tears come unbidden. They wash down your face with the rain."
-    $if this.data.score >3:
-        "It could be worse, you guess. Maybe there's a chance she'll be okay."
+    $if this.data.score >4:
+        "Despite all of it..."
+        "it could be worse, you guess. Maybe there's a chance she'll be okay."
         "Better check back on her..."
         clear_dialog
         "You step back inside."
@@ -156,9 +157,10 @@ day4noon_outside:
 
     else:
         "You wonder if you could have done more for her."
-        "Better check back on her..."
+        talk em talk "What sort of... Of course you could have..."
+        "Better check back on her."
         clear_dialog
-        "You step back inside."
+        "You climb inside."
         play music hornet
         set_screen end5
         "The smell has become no less upsetting."
@@ -219,9 +221,16 @@ day4noon_outside:
 day4_endBad:
     set_screen end1
     play music rainsong
-    "You can't do this anymore."
+    "No,"
+    "this is all wrong"
+    "you can't do this anymore."
     "You realise that as you stare outside into the rain."
-    "You need to go back. You're Emily. You have a home. You don't need this rat or her grand ideas, or her constant holier-than-though proselityzing. Just because you're not from the machining district..."
+    "You need to go back. You're Emily. You have"
+    "a home."
+    "You don't need this rat,"
+    "or her grand ideas,"
+    "or her constant holier-than-though proselityzing."
+    "Just because you're not from the fucking machining district..."
     "She doesn't even know where FRUIT comes from. You feel churning in your stomach."
     "Then..."
     set_screen endBad

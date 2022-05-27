@@ -63,7 +63,7 @@ day3dream:
     "You see your own face in some of them. Bright white and gold, a shooting star. Your hair looks good short."
     "You look good with freckles, even if they are only specks of dust."
     "You look at your hands. The nail polish is blue."
-    "The cut on your hand is gone now. So is hornet's coat. You still feel you might hear her if you linger, but it doesn't seem as important now. Not now that you've become someone else."
+    "The cut on your hand is gone now. So is Hornet's coat. You still feel you might hear her if you linger, but it doesn't seem as important now. Not now that you've become someone else."
     "You feel yourself becoming a new person. You're inside the old Emily now. A cocoon. Emily didn't know half of what you do."
     talk poet talk "Emily is dead. Long live Emily."
     "A great terror takes hold, then subsides, like a wave."
@@ -83,7 +83,7 @@ day3dream:
             "You reach into the largest pool"
     set_screen hollow3
     "Your hand slips into the water. It is pleasantly cool."
-    "Ripples run through. Your fingers find nothing at first, but then the light shifts. Inside, you see hornet's face - not reflection but refraction, a crystal structure."
+    "Ripples run through. Your fingers find nothing at first, but then the light shifts. Inside, you see Hornet's face - not reflection but refraction, a crystal structure."
     "She's beautiful. You've never seen her so happy."
     "About her neck is a golden ribbon, pure light, clearly a gift."
     "She's so *happy,* Emily. Yours forever."

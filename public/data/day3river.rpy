@@ -67,10 +67,7 @@ day3river:
                 "Hornet's eyes widen a sliver."
                 talk hrn talk "Oh, smart. I guess we can do that."
                 "You start walking together."
-
     jump day3river_walk
-    #why did you leave the city conversation
-    #fruit conversation - option to really hurt hornet
 
 day3river_walk:
     clear_dialog
@@ -83,7 +80,7 @@ day3river_walk:
         "Your feet hurt badly. Your wrist too; like it or not, Hornet was right when she told you to bring a backpack. You can feel a cramp deep inside your arm, far more painful than that cut."
     "There's a gentle wind, and occasional birdsong."
     "What rushes have survived the thick dust don't sway, however; they're coarse and woody, sounding like dead leaves when you step on them."
-    "Everything at ground level is smeared in that dust. An off-white colour already clings to your dress and hornet's jacket."
+    "Everything at ground level is smeared in that dust. An off-white colour already clings to your dress and Hornet's jacket."
     "It smells of"
     $if this.data.tensionPoints > 4:
         "styrofoam."
@@ -109,7 +106,7 @@ day3river_walk:
         "She keeps walking, and you follow, a pace or two behind her."
         jump day3river_argue
     else:
-        $if this.data.score > 2:
+        $if this.data.score > 3:
             "peach pits."
             "It's a neutral smell. Not great, but sort of... homely."
             "After some time walking, Hornet slows down, and looks at you."
@@ -221,7 +218,7 @@ day3river_walk:
             "She shakes something off."
             talk hrn talk "I just couldn't be there anymore. It was doing such terrible things to everyone around me, to me, to..."
             $if this.data.score > 1:
-                tak hrn talk"to us..."
+                talk hrn talk "to us..."
             "another shake. She's not looking you in the eye."
             talk hrn talk "Well... If that makes sense, there's why."
             "She looks sad."
