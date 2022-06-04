@@ -6,8 +6,8 @@ window.addEventListener('load', () => {
     charactersPath: 'data/characters.json',
     configPath: 'data/config.json',
   }, {
-    debug: true,
-    logging: true,
+    debug: false,
+    logging: false,
   });
 });
 

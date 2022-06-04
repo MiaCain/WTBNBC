@@ -82,6 +82,7 @@ day2dream_bad:
                     "But the dog vanishes, and the cup is filled only with ripples"
                     "Why?"
                     talk poet talk "And trembling so bad you almost spill it, you set it down on the floor, before"
+    jump day2dream_wake
     
 day2dream_badOld:
     play music teasong
