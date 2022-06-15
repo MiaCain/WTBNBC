@@ -4,7 +4,7 @@
 }
 
 .dialog-text.override {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: GeorgiaLocal;
   color: #F5F4C0;
 }
@@ -12,6 +12,11 @@
 .dialog-choice.override {
   font-size: 1.2em;
   font-family: GeorgiaLocal;
+}
+
+.dialog-choice.override:hover{
+    color: #3f3030;
+    background-color: #F5F4C0;
 }
 
 .modal-container{
