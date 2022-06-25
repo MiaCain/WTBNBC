@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     charactersPath: 'data/characters.json',
     configPath: 'data/config.json',
   }, {
-    debug: false,
+    debug: true,
     logging: false,
   });
 });
