@@ -5,7 +5,7 @@ day4morning:
     "Rain is thundering down on the roof. Some drips in through cracks, though you find yourself dry; just chilly."
     "You pull on Hornet's coat."
     "It takes you a moment to spot her. She must have rolled around a bit."
-    $if this.data.tensionPoints > 3:
+    if (> $data.tensionPoints 3):
         "You wake her, perhaps more roughly than is really warranted. As she stirs, you climb to the hole, and peek outside."
     else:
         "You wake her with a gentle nudge. As she stirs, you climb to the entrance."
@@ -15,7 +15,7 @@ day4morning:
     choice:
         "When you duck back in, Hornet is yawning."
         "'Good morning.":
-            $if this.data.tensionPoints >3:
+            if (> $data.tensionPoints 3):
                 talk em talk "Morning."
                 talk hrn talk "Nnnrhg."
                 "She clutches her head, in apparent pain."
@@ -46,7 +46,7 @@ day4morning:
     "She shakes her head, and picks up her backpack."
     talk em talk "At least take your jacket back!"
     "You move to pull an arm free."
-    $if this.data.tensionPoints > 3:
+    if (> $data.tensionPoints 3):
         talk hrn talk "Keep... The jacket."
         "She hisses. She seems suddenly annoyed."
         talk hrn talk "Keep my scarf for all I care. Come on."
@@ -59,7 +59,7 @@ day4morning:
     "The rain is horrible. It is very cold, and passing under leaves means much of it is chalky with that dust."
     "You can't see further than a few feet, and it's certainly not weather for easy conversation."
     "You almost sink back into a stupor, plodding on, feeling the rain ruin your hair. You should have brought a raincoat. Or an umbrella..."
-    $if this.data.tensionPoints > 5:
+    if (> $data.tensionPoints 5):
         talk pa talk "You have both those in the city."
         talk pa talk "A full covered balcony terrace made from ceramic glass, even... If you want it."
     "A sudden gasp tears you from your thoughts."

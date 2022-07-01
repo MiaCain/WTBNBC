@@ -58,12 +58,12 @@ day1dream_wake:
             talk em talk "Promise it. Swear it. You don't want to... You won't do me any, you... you fucking..."
     "A gentle touch on your arm distracts you."
     talk hrn talk "Did you have a bad dream?"
-    $if this.data.tensionPoints <= 1:
+    if (<= $data.tensionPoints 1):
         "Hornet plants a gentle kiss on your forehead."
         add this.data.score 1
         talk hrn talk "It was only a bad dream, Emily. Try to get some more rest, it'll be morning soon."
     talk hrn talk "I promise I won't ever hurt you, Emily. Or why would I have run away with you?"
-    $if this.data.tensionPoints <3:
+    if (< $data.tensionPoints 3):
         "You can make out a little smile."
     talk hrn talk "Good night."
     set_screen blank

@@ -3,7 +3,7 @@ day3river:
     set_screen swamp5
     "The morning comes, and Hornet looks no more like a dog than she ever has."
     "The wagon hasn't collapsed either. You eat a quiet breakfast, creamed corn and cold flatbreads that both taste of conservants."
-    $if this.data.dreamDogEat:
+    if $data.dreamDogEat:
         talk hrn talk "..."
         talk em talk "..." 
     else:
@@ -23,7 +23,7 @@ day3river:
     "A dusty path leads along the bank, some meters above it. It's asphalt, but old and run through with deep cracks. Thick white residue, not quite sand, has filled those, and it looks almost like grey marble, but for the tufts of beige weeds that sprout between the chunks of pavement."
     "Green would line the path, but for that dust - which has choked out most of the grass, it seems. Even the trees are a thick, chalky white, some all the way up to their crowns."
     "Whatever it is, it must come from the river - perhaps during floods." 
-    $if this.data.tensionPoints > 2:
+    if (> $data.tensionPoints 2):
         "Hornet looks tired."
         choice:
             talk hrn talk "Looks like we're in for more walking."
@@ -56,10 +56,10 @@ day3river:
         "'We need to head that way.' (Point west)":
             "You gesture at the sun, still hanging low in the eastern sky, broken into several shards by the polluted sky. It'll mostly reassemble by noon."
             talk em talk "We need to head away from the sun. That'll be where the city is."
-            $if this.data.tensionPoints > 3:
+            if (> $data.tensionPoints 3):
                 "You think you detect Hornet's nose wrinkling slightly."
                 talk hrn talk "Well aren't you clever. Alright."
-                $if this.data.OR.bagmention:
+                if $data.OR.bagmention:
                     "Let's go then. I was already missing the sound of your suitcase rattling."
                     "You ignore her, but start walking."
                 "You start walking, and Hornet follows."
@@ -76,62 +76,62 @@ day3river_walk:
     "The river, straightened as it is, makes very little noise; there's a rhythmic growl where it laps at the boulders, but that's all."
     "To your right is a dense wall of tall trees, seemingly culled from the path long ago. It is mirrored across the river, though the air is too hazy to tell whether there's another path there."
     "You can't see much of anything in the distance- no bridges or boats, though there is a curve near the horizon that might obscure something."
-    $if this.data.tensionPoints > 2:
+    if (> $data.tensionPoints 2):
         "Your feet hurt badly. Your wrist too; like it or not, Hornet was right when she told you to bring a backpack. You can feel a cramp deep inside your arm, far more painful than that cut."
     "There's a gentle wind, and occasional birdsong."
     "What rushes have survived the thick dust don't sway, however; they're coarse and woody, sounding like dead leaves when you step on them."
     "Everything at ground level is smeared in that dust. An off-white colour already clings to your dress and Hornet's jacket."
     "It smells of"
-    $if this.data.tensionPoints > 4:
+    if (> $data.tensionPoints 4):
         "styrofoam."
         "It's a toxic smell. It digs deep into your nostrils, seeming to fill your every breath with that fine powder. You hope it isn't bad for you..."
         "Hornet seems to think about something. But when she glances at you, she seems to think better than to tell you."
         talk em talk "What is it?"
         talk hrn talk "Nothing. Save your breath."
-        $if this.data.OR.cityfeeling == 0:
+        if (== $data.OR.cityfeeling 0):
             "There's a disinterested air about her."
-        $if this.data.OR.cityfeeling == 1:
+        if (== $data.OR.cityfeeling 1):
             "There's a slight sadness to her."
             "You sort of wish things were different..."
-            $if this.data.bagmention:
+            if $data.bagmention:
                 "Then you remember her constant nettling."
-                $if this.data.ScratchFight:
+                if $data.ScratchFight:
                     "Not to mention that deal with your cut. Your hand throbs. Is it already infected?"
                 "Yeah, screw you, Hornet."
             else:
                 "Then you remember that attitude she's so ready with..."
-                $if this.data.ScratchFight:
+                if $data.ScratchFight:
                     "Not to mention that deal with your cut. Your hand throbs. Is it already infected?"
                 "Yeah, screw you, Hornet."
         "She keeps walking, and you follow, a pace or two behind her."
         jump day3river_argue
     else:
-        $if this.data.score > 3:
+        if (> $data.score 3):
             "peach pits."
             "It's a neutral smell. Not great, but sort of... homely."
             "After some time walking, Hornet slows down, and looks at you."
             talk hrn talk "I suppose I never told you why I wanted to leave the City, huh?"
             talk em talk "No..."
-            $if this.data.OR.leaveReason == 1:
+            if (== $data.OR.leaveReason 1):
                 talk hrn talk "Well, you left because of your family..."
                 "You nod, thinking back to the admonissions. The night of sobbing you endured when your sister told Mother, about Hornet and..."
                 "You shake the memory aside."
-            $if this.data.OR.leaveReason == 2:
+            if (== $data.OR.leaveReason 2):
                 talk hrn talk "Well, you left because of... You had your reasons."
                 "Something plays across Hornet's face as she recalls your answer."
-            $if this.data.OR.leaveReason == 3:
+            if (== $data.OR.leaveReason 3):
                 talk hrn talk "Well, you left because of the... The feeling, you said."
                 "So many sleepless nights. So much time looking down at all the winding suprastructures. The great concrete circuit... Hornet lost somewhere within, crushing her life to powder in a warehouse..."
             talk hrn talk"But I just feel like..."
-            $if this.data.OR.cityfeeling == 1:
+            if (== $data.OR.cityfeeling 1):
                 talk hrn talk "Well. I know I said I *said* I felt sad about it. When we were looking down at it."
-            $if this.data.OR.cityfeeling == 2:
+            if (== $data.OR.cityfeeling 2):
                 talk hrn talk "I said earlier I felt nostalgic about it... When we were looking down at it, I mean."
-            $if this.data.OR.cityfeeling == 3:
+            if (== $data.OR.cityfeeling 3):
                 talk hrn talk "I... I know I said I hated it."
                 "That wasn't nice of her, no. Though you can see why she felt that way. To a degree."
                 talk hrn talk "When we were looking down at it there, I did feel that way, but..."
-            $if this.data.OR.cityfeeling == 0:
+            if (== $data.OR.cityfeeling 0):
                 talk hrn talk "I couldn't really think of something to say earlier. When we were looking down at it. I just wanted to get out of dodge, you know?"
             talk hrn talk "Only now, thinking about it that isn't quite right. I..."
             "She smiles."
@@ -174,17 +174,17 @@ day3river_walk:
         "After some time walking, Hornet slows down, and looks at you."
         talk hrn talk "I suppose I never told you why I wanted to leave the City, huh?"
         talk em talk "No..."
-        $if this.data.OR.leaveReason == 1:
+        if (== $data.OR.leaveReason 1):
             talk hrn talk "Well, you left because of your family..."
             "You shiver, thinking back to the admonissions. The night of sobbing you endured when your sister told Mother."
-        $if this.data.OR.leaveReason == 2:
+        if (== $data.OR.leaveReason 2):
             talk hrn talk "Well, you left because of... You had your reasons."
             "Her mouth becomes a thin line remembering your answer."
-        $if this.data.OR.leaveReason == 3:
+        if (== $data.OR.leaveReason 3):
             talk hrn talk "Well, you left because of the... The feeling, you said."
             "So many sleepless nights. So much time looking down at all the winding suprastructures. The great concrete circuit..."
         "But I just feel like..."
-        $if this.data.OR.cityfeeling == 1:
+        if (== $data.OR.cityfeeling 1):
             talk hrn talk "That place was killing me. There were places to hide, but, we was always..."
             "she casts around for the right words."
             talk hrn talk "I was always in the belly of the beast, I guess. Does that make sense?"
@@ -209,7 +209,7 @@ day3river_walk:
                     talk hrn talk "Th-thanks, Emily..."
                     add data.tensionPoints -1
                     add data.score 1
-        $if this.data.OR.cityfeeling == 2:
+        if (== $data.OR.cityfeeling 2):
             talk hrn talk "I..."
             "She has trouble composing her next sentence."
             talk hrn talk "I really... miss some of my friends, from there, you know."
@@ -217,7 +217,7 @@ day3river_walk:
             talk hrn talk "well, anyway."
             "She shakes something off."
             talk hrn talk "I just couldn't be there anymore. It was doing such terrible things to everyone around me, to me, to..."
-            $if this.data.score > 1:
+            if (> $data.score 1):
                 talk hrn talk "to us..."
             "another shake. She's not looking you in the eye."
             talk hrn talk "Well... If that makes sense, there's why."
@@ -241,7 +241,7 @@ day3river_walk:
                     talk hrn talk "Th-thanks, Emily..."
                     add data.tensionPoints -1
                     add data.score 1
-        $if this.data.OR.cityfeeling == 3:
+        if (== $data.OR.cityfeeling 3):
             talk hrn talk "I just... REALLY hated it."
             "You feel your gut tighten. Not this again..."
             talk hrn talk "The streets. Endless rows of them. The blocks so high you couldn't see the sky sometimes. The stink of sewage on the morning commute..."
@@ -280,7 +280,7 @@ day3river_walk:
                             talk em talk "Let's... Keep moving."
                             add data.tensionPoints 1
                             jump day3river_argue
-        $if this.data.OR.cityfeeling == 0:
+        if (== $data.OR.cityfeeling 0):
             talk hrn talk "I..."
             "she thinks about her answer for some time."
             talk hrn talk "I couldn't stand it in there. I mean..."
@@ -322,7 +322,7 @@ day3river_walk:
     jump day3river_argue
 
 day3river_argue:
-    $if this.data.tensionPoints > 2:
+    if (> $data.tensionPoints 2):
         "You walk on."
         "The trees to your right rustle and sway in the wind, and a cloud of dust drifts from the lowest branches."
         choice:
@@ -344,13 +344,13 @@ day3river_argue:
                         "She goes bright red."
                         talk hrn talk "Is it..."
                         "She knows she doesn't."
-                        $if this.data.tensionPoints > 4:
+                        if (> $data.tensionPoints 4):
                             talk em talk "Wow Hornet, you should have paid more attention in school."
                             add data.tensionPoints 2
                             "She freezes. There's something jovial in your voice. You can't stop yourself."
                             talk em talk "Didn't your parents teach you anything, Hornet? Fruit comes from *trees,* you fucking *child.*"
                             "The look on her face is very satisfying."
-                            $if this.data.OR.bagmention:
+                            if $data.OR.bagmention:
                                 "Especially after that shit she pulled with your bag. Who's laughing now?"
                             "Your cut is hurting less already."
                             set_screen blank
@@ -365,7 +365,7 @@ day3river_argue:
                                 "She freezes. There's something jovial in your voice. You can't stop yourself."
                                 talk em talk "Didn't your parents teach you anything, Hornet? Fruit comes from *trees,* you fucking *child.*"
                                 "The look on her face is very satisfying."
-                                $if this.data.OR.bagmention:
+                                if $data.OR.bagmention:
                                     "Especially after that shit she pulled with your bag. Who's laughing now?"
                                 "Your cut is hurting less already."
                                 set_screen blank

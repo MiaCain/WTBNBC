@@ -330,15 +330,17 @@ Otherwise hovering choices doesn't change the color of skill check prompts. */
   background-image: url("img/ui/scroll.png");
   overflow-y: hidden;
 }
-
+* {
+    text-shadow: unset !important;
+  }
 .interact-button {
     user-select: none;
     -moz-user-select: none;
     background-image: url("img/ui/continuet0.png") !important;
     color: rgba(0, 0, 0, 0) !important;
+    font-size: 0%;
 }
 .interact-button:hover {
     background-image: url("img/ui/continuet1.png") !important;
     color: rgba(0, 0, 0, 0) !important;
-
 }

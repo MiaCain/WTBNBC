@@ -1,3 +1,4 @@
+import 'narrat/dist/lib.css';
 import './styles/main.css';
 import { startApp } from 'narrat';
 

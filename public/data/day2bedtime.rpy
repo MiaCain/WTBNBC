@@ -8,13 +8,13 @@ day2bedtime_firstaid:
     "She gestures at a plastic case. A triangle is printed on the front,"
     "a lung design within it."
     talk hrn talk "A first aid kit!"
-    $if this.data.tensionPoints >= 5:
+    if (>= $data.tensionPoints 5):
         "You haven't paid it any mind all day, but suddenly, the cut on the back of your hand throbs, hurting badly. You feel nauseous."
         choice:
             "You gasp in shock."
             "'Hornet, I *need* that!":
                 talk em talk "Hornet, I *need* that!"
-                $if this.data.FORlookedAtScratch:
+                if $data.FORlookedAtScratch:
                     "She looks startled."
                     talk hrn talk "What? What for?"
                     "Hornet has slipped the plastic case out of its slot, and is opening it."
@@ -71,7 +71,7 @@ day2bedtime_firstaid:
             "You gasp in shock."
             "'Hornet, I *need* that!":
                 talk em talk "Hornet, I *need* that!"
-                $if this.data.FORlookedAtScratch:
+                if $data.FORlookedAtScratch:
                     "She looks over."
                     talk hrn talk "What, for your uh, cut?"
                     "Hornet has slipped the plastic case out of its slot, and is opening it. She holds out her hand."
@@ -131,7 +131,7 @@ day2bedtime_firstaid:
         "Her hands are rough and calloused, but warm, and she's gentle. There's something almost soothing in her rhythm as she spreads it, in a circular motion, working the ointment into your skin."
         "Finally, she wraps the strip of gauze once around your hand, then seals it with adhesive tape."
         talk hrn talk "There you go."
-        $if this.data.tensionPoints <2:
+        if (< $data.tensionPoints 2):
             "She looks beautiful in this light."
             "Before you know it, you've leaned down to kiss her on her freckled cheek."
             "She blinks at you, dark, mousy lashes encircling her big eyes. She seems startled, but not put off."

@@ -29,18 +29,18 @@ day3bedtime:
     talk hrn talk "Let's make dinner. We can spend the evening here."
     "You do."
     "Neither of you are very hungry, so you eat more of the bread. It's running low... Hopefully you'll find something to eat soon, you think."
-    $if this.data.tensionPoints > 4:
+    if (> $data.tensionPoints 4):
         "There's food back in the City..."
         "You try to forget the thought."
     "You make your makeshift bed and open the book you brought."
-    $if this.data.tensionPoints > 1:
+    if (> $data.tensionPoints 1):
         "Not a single word stays in your head, however. You're keyed up, distracted."
         "You start thinking about throwing the book in the river."
     else:
         "It's a modern romance novel, about a rat who falls in love with a white fox in a church."
         "It's calming."
     "Hornet heads outside to climb the building."
-    $if this.data.tensionPoints <3:
+    if (< $data.tensionPoints 3):
         talk em talk "Be careful!"
         talk hrn talk "Of course I will!"
         "She gives you a wry smile as she ducks out."
@@ -52,19 +52,19 @@ day3bedtime:
     talk hrn talk "Ruined tower to the north-east, over the treetops. I don't think it's anything to be worried about."
     "Nor something to head for, by her tone."
     talk hrn talk "Dark clouds coming our way. Let's hope this place is as good a shelter as it seemed."
-    $if this.data.score > 2:
+    if (> $data.score 2):
         set_screen river6a
         set data.sleepstatus 1
         "Hornet lies down by your side, and you stroke her palm for a while. The light fades."
         "You don't need words now."
-        $if this.data.LOVE == 0:
+        if (== $data.LOVE 0):
             "You realise you love her. Does she love you too? She's right next to you, you can feel her chest rise and fall..."
             set this.data.LOVE 2
             "The question chases itself around your mind."
         "It's nice, having her there. There's a comfortable stillness that falls over you, and her soft breathing makes you sleepy..."
         jump opener3
     else:
-        $if this.data.tensionPoints > 4:
+        if (> $data.tensionPoints 4):
             set_screen river6c
             set datasleepstatus 3
             talk em talk "Hmh."

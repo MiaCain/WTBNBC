@@ -7,7 +7,7 @@ day3dream:
     "..."
     "It's not your legs that hurt now."
     "Your back is cramped from the hard floor, your neck from the pillow."
-    $if this.data.sleepstatus == 1:
+    if (== $data.sleepstatus 1):
         "There's a warm creature clinging to you, breathing softly."
     else:
         "It's cold. So cold. You feel abandoned."
@@ -24,13 +24,13 @@ day3dream:
     "Hornet is here too, somewhere. In some way."
     "If you were to linger here... Even only a minute or two... You'd hear her. You'd hear her voice crying out for you."
     "Crying your name."
-    $if this.data.LOVE == 0:
+    if (== $data.LOVE 0):
         "The thought makes you so scared."
-    $if this.data.LOVE == 1:
+    if (== $data.LOVE 1):
         "The thought makes you desperate. Hornet..."
-    $if this.data.LOVE == 2:
+    if (== $data.LOVE 2):
         "The thought fills you with longing. Why is she so far away?"
-        $if this.data.sleepstatus == 1:
+        if (== $data.sleepstatus 1):
             "But wasn't she right there? Her hand was on your tummy..."
     "The trees all around are creaking. There must be wind in the crowns, but dawn hasn't come yet. It won't for a long while. So the wind won't reach you down here."
     talk pa talk "It's safe at night."
@@ -89,11 +89,11 @@ day3dream:
     "She's so *happy,* Emily. Yours forever."
     "She won't ever hurt you. Won't ever turn her face from you, leave your side..."
     "No biting teeth... A gentle creature, feeding from your hand..."
-    $if this.data.LOVE == 0:
+    if (== $data.LOVE 0):
         "It's all you need to make this pain right again. One handful. Your throat feels dry enough..."
-    $if this.data.LOVE == 1:
+    if (== $data.LOVE 1):
         "Her kiss was so lovely... There will be a thousand more, and she will never feel pain..."
-    $if this.data.LOVE == 2:
+    if (== $data.LOVE 2):
         "You didn't tell her you loved her earlier. This, however, will speak louder than a thousand words."
     choice:
         "Do it."

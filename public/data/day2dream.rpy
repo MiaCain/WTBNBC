@@ -1,8 +1,8 @@
 day2dream:
-    $if this.data.tensionPoints > 5:
+    if (> $data.tensionPoints 5):
         jump day2dream_worse
     else:
-        $if this.data.score < 1:
+        if (< $data.score 1):
             jump day2dream_worse
         else:
             jump day2dream_bad
@@ -47,7 +47,7 @@ day2dream_bad:
     "a curtain parts, and the figure passes down a fine china cup."
     set_screen tea2a
     "you take it,"
-    $if this.data.score >1:
+    if (> $data.score 1):
         "carefully."
     else:
         "spilling some droplets."
@@ -224,7 +224,7 @@ day2dream_wake:
     "You're in the train cart."
     "Hornet is dozing by you."
     "Would she really..."
-    $if this.data.dreamDogEat:
+    if $data.dreamDogEat:
         "...eat you? Leave you until you turn into carrion?"
     else:
         "...leave you? Abandon you to these endless woods?"

@@ -13,7 +13,7 @@ day2swamp:
         "'A peat bog?'":
             talk em talk "A peat bog?"
     talk hrn talk "That's the one."
-    $if this.data.tensionPoints < 4:
+    if (< $data.tensionPoints 4):
         talk hrn talk "Thanks."
         choice:
             talk em talk "Speaking of..."
@@ -52,7 +52,7 @@ day2swamp_cont:
         "Your case is thumping on the boards rhythmically. You envy Hornet her backpack."
         "'Damn suitcase...'":
             add data.tensionPoints 1
-            $if this.data.bagmention:
+            if $data.bagmention:
                 "Hornet freezes for a moment, and you almost bump into her."
                 talk hrn talk "Yeah,"
                 "she snarls,"
@@ -83,7 +83,7 @@ day2swamp_cont:
             set data.OR.leaveReason 2
             talk em talk "I wanted to see something new."
             add data.tensionPoints 1
-            $if this.data.tensionPoints >= 4:
+            if (>= $data.tensionPoints 4):
                 "A nasty look passes over her face for a brief second, then it's gone."
                 talk hrn talk "Like a tourist, huh?"
                 "You feel yourself flush. Just because you're not a factory worker doesn't mean she gets to..."
@@ -185,7 +185,7 @@ day2swamp_train:
     talk hrn talk "I've no idea how far we've come, but that swamp must be miles long. Maybe we'll get to leave it come the morning."
     "She looks up at the sky. It's only slightly darker than the fog all around you."
     talk hrn talk "And no helicoptres that I can see."
-    $if this.data.FORHelicoptLooking:
+    if $data.FORHelicoptLooking:
         talk em talk "You were wrong, looks like."
         "She scared you over nothing."
         talk hrn talk "Well..."
@@ -205,7 +205,7 @@ day2swamp_train:
             talk hrn talk "On the walkway? Are you crazy?"
             "Hot blood rushes to your head."
             talk em talk "Don't give me that! It looks unsafe!"
-            $if this.data.tensionPoints > 5:
+            if (> $data.tensionPoints 5):
                 "Who does this rat think she is!?"
             "Hornet turns back to look around the inside of the carriage, then pulls her feet in, and jumps on the seat."
             "You screech in shock. Birds startle, somewhere."
@@ -224,7 +224,7 @@ day2swamp_train:
                         "'No!'":
                             talk em talk "No!"
                             talk hrn talk "Suit yourself. Sleep well out there."
-                            $if this.data.tensionPoints > 5:
+                            if (> $data.tensionPoints 5):
                                 talk hrn talk "If you roll into the bog and die, do me a favour and take off my coat first."
                             add data.tensionPoints 1
                             "Horror wells up inside you for a moment, and you choke on a breath."

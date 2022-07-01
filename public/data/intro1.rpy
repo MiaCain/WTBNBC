@@ -139,7 +139,7 @@ intro1_leave:
     "Clumps of moss cling to the sign, to the makeshift fence meant to keep animals off the trail."
     "Even at night, the factory is alive. Flames sputter atop tall towers, casting odd shadows into the clouds."
     "The sky to the east is bright orange. The City."
-    $if this.data.tensionPoints <= 0:
+    if (<= $data.tensionPoints 0):
         "Emily looks forlorn."
         choice:
             "Maybe you should..."

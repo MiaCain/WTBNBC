@@ -10,7 +10,7 @@ day1forest_offramp:
             talk hrn talk "Those heels too, actually..."
             "Emily gives you an irritated look."
             "Familiar. Copper in your mouth."
-            $if this.data.tensionPoints < 1:
+            if (< $data.tensionPoints 1):
                 talk em talk "Can you not nag me?"
                 talk em talk "I know what I'm doing."
                 "Suddenly, the air between is tinged with bitterness. And just when you were having a nice time, too..."
@@ -99,13 +99,13 @@ day1forest_trees:
         "Emily shivers."
         "(Offer her your coat, quietly)":
             "You open your coat, showing Emily your warm sweater and scarf, raising your brow as a silent question."
-            $if this.data.OR.bagmention:
+            if $data.OR.bagmention:
                 "She shoots you a reproachful look, then keeps moving. You feel a little bad."
                 set data.FORhasCoat false
                 jump day1forest_cont
 
             else:
-                $if this.data.tensionPoints > 3:
+                if (> $data.tensionPoints 3):
                     "She shoots you a reproachful look, then keeps moving. You feel a little bad."
                     set data.FORhasCoat false
                     jump day1forest_cont
@@ -116,7 +116,7 @@ day1forest_trees:
 
         "(Ask if she wants to borrow your coat)":
             talk hrn talk "Do you want to use this for a while? Me having a sweater and all."
-            $if this.data.OR.bagmention:
+            if $data.OR.bagmention:
                 "She shoots you a reproachful look."
                 talk em talk "No, I think I'll be fine, thank you."
                 "Her pace quickens, and her trunk bounces on a stray root. You hurry to keep up."
@@ -140,11 +140,11 @@ day1forest_cont:
     "You keep walking for a while."
     "Fatigue is starting to set in. The forest is repetitive, endless rows of slender tall pines. Real enough, but planted to feed industry, all the same."
     "There is little wildlife. You hear birdcalls now and then, and you can see insects flit through the air just in front of you."
-    $if this.data.tensionPoints <= 2:
+    if (<= $data.tensionPoints 2):
         talk em talk "Hornet?"
         talk hrn talk "Hm?"
         talk em talk "I'm scared. I don't think I want to do this anymore."
-        $if this.data.FORhasCoat:
+        if $data.FORhasCoat:
             "She pulls your coat tighter around herself."
         choice:
             talk hrn talk "Hey now..."
@@ -191,7 +191,7 @@ day1forest_cont:
             talk hrn talk "No, I don't think they're looking for us."
             talk hrn talk "But keep your head down anyway, okay?"
     "She looks irritated for a moment."
-    $if this.data.FORHelicoptLooking:
+    if $data.FORHelicoptLooking:
         choice:
             talk em talk "That's not what I meant. I was asking if you think they're scary."
             "'That's the same thing!'":
@@ -203,7 +203,7 @@ day1forest_cont:
             "'Oh. Yeah, they are.'":
                 add data.tensionPoints 1
                 talk hrn talk "Oh. Yeah, they are."
-                $if this.data.FORhasCoat:
+                if $data.FORhasCoat:
                     "She bundles herself up in your coat, like she's trying to hide."
                 talk em talk "O-oh. I hope they'll move on soon..."
     else:
@@ -218,7 +218,7 @@ day1forest_cont:
             "'Oh. Yeah, they are.'":
                 add data.tensionPoints 1
                 talk hrn talk "Oh. Yeah, they are."
-                $if this.data.FORhasCoat:
+                if $data.FORhasCoat:
                     "She bundles herself up in your coat, like she's trying to hide."
                 talk em talk "O-oh. I hope they'll move on soon..."
             "'Like I said, they're not.'":

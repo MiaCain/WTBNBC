@@ -3,7 +3,7 @@ day4noon:
     set_screen end4
     "By the time you settle Hornet down, you can see she's missing a leg too, even the boot it was in."
     "You seat her on her jacket, propped up against her backpack."
-    $if this.data.tensionPoints > 5:
+    if (> $data.tensionPoints 5):
         talk hrn talk "Thanks, s-S..."
         "What now?"
         talk hrn talk "c-Cel..."
@@ -12,7 +12,7 @@ day4noon:
         "Pathetic little broken creature. No one will even miss her."
         "You take a step back, then another. Suddenly, you're not even thinking about all the way you've come."
         "Nothing is further from your mind than the Section now."
-        $if this.data.bagmention:
+        if $data.bagmention:
             "This creature and her fucking admonissions... Your nice dress and suitcase..."
         "Nothing but hate in her heart. For all the beautiful things in this world, in your City..."
         "You take another step back, then another."
@@ -22,7 +22,7 @@ day4noon:
     talk hrn talk "Thanks, Eh... e..."
     "She appears to slip into sleep. You check her throat, but she's breathing okay. She's burning hot to the touch."
     "You zip her bag open. Inside is an orderly set of necessities. A few changes of clothes, all dark. Food."
-    $if this.data.hasSoda:
+    if $data.hasSoda:
         "There..."
         "A smooth, cold aluminium can."
         set data.foundCan true
@@ -47,7 +47,7 @@ day4noon:
         set data.foundCan false
         "You don't find what you were hoping for... Nothing to cool her with."
     "You reach back in."
-    $if this.data.hasFirstaid:
+    if $data.hasFirstaid:
         "There it is. A plastic box."
         set data.foundbox true
         add data.score 1
@@ -71,15 +71,15 @@ day4noon_outside:
     set_screen end1
     play music rainsong
     "Thoughts rush through your head. You look up at the roiling grey heavens."
-    $if this.data.foundbox:
-        $if this.data.foundCan:
+    if $data.foundbox:
+        if $data.foundCan:
             "At least you've managed to cool her. And bandage her up a little."
             "Maybe... Just maybe, that'll be enough..?"
         else:
             "At least you managed to bandage her up. That fever, though..?"
             talk em talk "Why'd you have to drink that soda... Stupid... Stupid rich girl..."
     else:
-        $if this.data.foundCan:
+        if $data.foundCan:
             "At least you've managed to cool her."
             "But that wound..."
             talk em talk "Stupid, stupid rich girl... Needed that scratch treated so bad, did you..."
@@ -87,7 +87,7 @@ day4noon_outside:
             "There was nothing you could do for her. You feel sick to your stomach."
             talk em talk "Why'd you have to drink that soda... Bandage that s-scratch... Stupid... Stupid rich girl..."
     "Tears come unbidden. They wash down your face with the rain."
-    $if this.data.score >4:
+    if (> $data.score 4):
         "Despite all of it..."
         "it could be worse, you guess. Maybe there's a chance she'll be okay."
         "Better check back on her..."
