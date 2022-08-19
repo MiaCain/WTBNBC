@@ -205,8 +205,9 @@ day4noon_outside:
                 talk emdrm talk "YOU KNOW WHAT COMES NEXT."
                 "You make yourself look at her body."
         set_screen endMid
-        "Hornet's body is split open, in a large triangular gash. There's no gore, really; it looks clean, and smells of flowers."
+        "Hornet's body is split open, in a large triangular gash. There's no gore, really; it looks immaculate."
         "Flowers are in full bloom all around it. Even within it. What used to be her body is just a hollow, now, for new life."
+        "Two angel-wings of pulmonaria nestle in her clean white ribcage, her lungs turned to splendor. You can smell them from here."
         "You creep closer. There is nothing inside."
         "Only an array of purple and blue and magenta blossoms."
         "One of the flowers, a mutation, seems to glitter, golden."

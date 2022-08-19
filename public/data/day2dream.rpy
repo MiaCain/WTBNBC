@@ -58,7 +58,7 @@ day2dream_bad:
     "The cup is small, and decorated with faceless dogs. All of them look the other way, none deigning to even glance at you."
     "You try to turn the cup, to force them into facing your way, but you only manage to spill some of the tea."
     talk poet talk "It smells of fruit."
-    talk poet talk "Not in an appetizing way - in a dry, dusty way. Like apples and peaches about to go bad."
+    talk poet talk "Not in an appetizing way - in a dry, dusty way. Apples and peaches turning into vinegar."
     "The figure is gone, now, by the way. Thought I should mention."
     choice:
         talk poet talk "The saucer, now spattered with watery dark red droplets, depicts a dense forest. You try not to dwell on it."
@@ -172,7 +172,7 @@ day2dream_worse:
     talk poet talk "It is very, very hot in here. The air is humind and smells sweetly of rotting fruit."
     talk poet talk "Apples turning to vinegar"
     talk poet talk "Dogs everywhere. Black dogs, all facing you, every where you look."
-    talk poet talk "They're on the walls and on your pillow and on the carved furniture and on the glasses in the drink cabinet and on the wallpaper and on the carpet there are a hundred million threads the colours of rotting apples and pears in the grass weaving to form dogs slinking away."
+    talk poet talk "They're on the walls and on your pillow and on the carved furniture and on the glasses in the drink cabinet and on the wallpaper and on the carpet there are a hundred million threads the colours of rotting apples and peaches in the grass weaving to form dogs slinking away."
     talk poet talk "All of them are looking at you."
     "They won't hurt you. They'll keep their distance and watch until you die, and then they will eat you cold."
     talk poet talk "Distantly there's chattering, but you can't pay attention to it. Fear is choking you."

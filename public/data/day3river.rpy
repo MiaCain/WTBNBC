@@ -55,7 +55,7 @@ day3river:
         talk hrn talk "We twisted and wound around a lot in the fog. I'm not sure what direction this is, but..."
         "'We need to head that way.' (Point west)":
             "You gesture at the sun, still hanging low in the eastern sky, broken into several shards by the polluted sky. It'll mostly reassemble by noon."
-            talk em talk "We need to head away from the sun. That'll be where the city is."
+            talk em talk "We need to head away from the sun. That'll be where the City is."
             if (> $data.tensionPoints 3):
                 "You think you detect Hornet's nose wrinkling slightly."
                 talk hrn talk "Well aren't you clever. Alright."
@@ -294,7 +294,7 @@ day3river_walk:
                     talk em talk "Things could have gotten better..."
                     "she laughs."
                     talk hrn talk "Ha. I guess? I was always hearing that, but... I had a brother. He's..."
-                    talk hrn talk "he's not around anymore. The city took him, you know? And now, that..."
+                    talk hrn talk "he's not around anymore. The City took him, you know? And now, that..."
                     talk em talk "the Section."
                     talk hrn talk "That obscenity, yeah. Now that it's in place... There really is no future. Not for me, I don't think."
                     "Maybe not even for you."

@@ -12,7 +12,7 @@ intro1:
         talk em talk "Is this it?"
         "'I suppose so.'":
             talk hrn talk "I suppose so. Look, the train's stopped."
-            "The lights slowly flicker inside the carriages. There's a quiet whine as the engines shut down. It'll hum to life in a few hours, to pick up factory workers."
+            "The lights slowly flicker inside the carriages. There's a quiet whine as the engines shut down. It'll hum to life in a few hours, eager to pick up factory workers."
             talk em talk "I don't want it to be. We have to keep going! Look!"
             "She points at a videocamera. It's trained at the tracks. Her arm is pale."
             talk em talk "They'll know we're here by the morning, Hornet!"
@@ -135,8 +135,8 @@ intro1_hesitate:
 intro1_leave:
     clear_dialog
     set_screen offramp1
-    "The two of you walk along the station. There's an offramp that leads onto a beaten concrete track, flanked on either side by railway tracks. A roadsign points towards PEELE CO. POLYCARBON PLANT WEST."
-    "Clumps of moss cling to the sign, to the makeshift fence meant to keep animals off the trail."
+    "The two of you walk along the station. There's an offramp that leads onto a beaten concrete track, flanked on either side by the railway. A roadsign points towards PEELE CO. POLYCARBON PLANT WEST."
+    "Clumps of moss cling to the sign, to the asphalt, to the makeshift fence meant to keep animals off the trail."
     "Even at night, the factory is alive. Flames sputter atop tall towers, casting odd shadows into the clouds."
     "The sky to the east is bright orange. The City."
     if (<= $data.tensionPoints 0):
@@ -159,7 +159,7 @@ intro1_leave:
             talk hrn talk "We have to head away from the City!"
             talk em talk "Yes, we do..."
             "She glances over her shoulder. A gust of wind picks up some of her hair."
-            talk hrn talk "I don't know. I don't know. This factory is just another part of the city, Emily."
+            talk hrn talk "I don't know. I don't know. This factory is just another part of the City, Emily."
             talk em talk "We definitely won't find anyone sympathetic here..."
             set_screen offramp2
             "Both of you turn to face the forest. It reaches for the night sky like a million tentative fingers, interlocking dark in dark, until it's hard to tell where the clouds begin. It seems to pulsate. The night is dark."

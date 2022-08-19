@@ -88,7 +88,7 @@ day2swamp_cont:
                 talk hrn talk "Like a tourist, huh?"
                 "You feel yourself flush. Just because you're not a factory worker doesn't mean she gets to..."
             talk hrn talk "Right. Well... Lots of trees, at least."
-            talk hrn talk "Not that those are unheard of in *your* part of the city."
+            talk hrn talk "Not that those are unheard of in *your* part of the City."
             talk em talk "Hornet..."
             "She walks a little faster. Conversation over."
         "'I wanted to get rid of this god-awful feeling.'":
@@ -209,7 +209,10 @@ day2swamp_train:
                 "Who does this rat think she is!?"
             "Hornet turns back to look around the inside of the carriage, then pulls her feet in, and jumps on the seat."
             "You screech in shock. Birds startle, somewhere."
+            wait 3000
             "She kicks the inside of the carriage for good measure. The metal creaks, but the structure doesn't so much as tremble."
+            talk em talk "Hornet!"
+            wait 1000
             "Her round face appears in the window again."
             choice:
                 talk hrn talk "Seems sturdy enough to me. Come on in."
@@ -229,7 +232,7 @@ day2swamp_train:
                             add data.tensionPoints 1
                             "Horror wells up inside you for a moment, and you choke on a breath."
                             talk em talk "W-wait, Hornet, I didn't mean it-!"
-                            "Before you know it, you're scrambling inside after her, heart pounding. Your dress catches on some stray bit of glass, and rips, but you barely notice."
+                            "Before you know it, you're scrambling inside after her, heart pounding. Your dress catches on some stray bit of glass and rips, but you barely notice."
                             "You embrace Hornet, trembling. She seems uncomfortable all of a sudden."
                             "You pull away, and turn your face to the side so she can't see how distraught you feel. Would she really have left you?"
                             jump day2bedtime_firstaid

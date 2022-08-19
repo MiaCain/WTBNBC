@@ -31,7 +31,7 @@ day2bedtime_firstaid:
                         "You feel panic in your chest again."
                         "'It's a CUT, not a scratch!'":
                             talk em talk "It's a CUT, not a scratch!"
-                            "Hornet doesn't answer. Instead, she snaps the plastic case shut again, and stuffs it into the bottom of her backpack. The click of the latches sounds devastating."
+                            "Hornet doesn't answer. Instead, she snaps the plastic case shut again, and stuffs it into the bottom of her backpack. The click of the latches is devastating."
                             talk hrn talk "We're saving the medicine. Look, just get some sleep. I don't want to fight."
                             "She turns away, and starts taking off her scarf, to use it as a pillow."
                             add data.score -1
@@ -57,7 +57,7 @@ day2bedtime_firstaid:
                         "You feel panic in your chest again."
                         "'It's a CUT, not a scratch!'":
                             talk em talk "It's a CUT, not a scratch!"
-                            "Hornet doesn't answer. Instead, she snaps the plastic case shut again, and stuffs it into the bottom of her backpack. The click of the latches sounds devastating."
+                            "Hornet doesn't answer. Instead, she snaps the plastic case shut again, and stuffs it into the bottom of her backpack. The click of the latches is devastating."
                             talk hrn talk "We're saving the medicine. Look, just get some sleep. I don't want to fight."
                             "She turns away, and starts taking off her scarf, to use it as a pillow."
                             add data.score -1

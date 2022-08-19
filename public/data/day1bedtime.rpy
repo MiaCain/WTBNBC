@@ -1,7 +1,7 @@
 day1bedtime:
     set_screen forest3
     play music empty
-    "It's very hard to judge the time. You think maybe one or two in the morning, because even the roaring city seems quieter - though it could be the distance."
+    "It's very hard to judge the time. You think maybe one or two in the morning, because even the roaring City seems quieter - though it could be the distance."
     "As the trees gradually grow wilder, more underbrush appears, and their neat rows become disorderly."
     "Suddenly, a huge irregular shape swims out of the darkness; the corpse of a long-dead tree, some elder of the forest, hollow and pale."
     "The bark is cracked and dry, and Pulmonaria grow by the dusty roots."

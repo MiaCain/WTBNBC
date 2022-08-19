@@ -43,7 +43,7 @@ day1forest_cityview:
     "She shrugs."
     talk em talk "On paper. Did you not learn in school?"
     talk hrn talk "..."
-    "You watch the city for a minute."
+    "You watch the City for a minute."
     choice:
         talk em talk "What does it make you feel?"
         "'Nothing'":
@@ -76,7 +76,7 @@ day1forest_cityview:
             set data.OR.cityfeeling 3
             add data.tensionPoints 1
             talk hrn talk "Bad. Fuck this place. Fuck everything it's done to us."
-            "She looks shocked."
+            "Emily looks shocked."
             talk em talk "I-"
             talk hrn talk "Fuck everthing it's done to ME, at least. I hope I never see it again."
             "Emily can't think of anything to say, it seems. Her eyes shine with the sky's orange tint."
@@ -85,11 +85,11 @@ day1forest_cityview:
 
 day1forest_trees:
     set_screen blank
-    "The city is still reeling through your head. Thinking about it, you remember a slogan sprayed on a concrete wall by the canal off of Metternich Square. It said..."
+    "The City is still reeling through your head. Thinking about it, you remember a slogan sprayed on a concrete wall by the canal off of Metternich Square. It said..."
     "'IT'S KILLED AL L OF IT/"
     "EVeN THE S TARS'"
-    "Whoever wrote it wasn't wrong. There isn't a single star visible tonight. Even the moon, which you've seen on a good night now and then- (when getting kebabs with coworkers after a late shift)"
-    "-is nowhere at all. Its dreadful to think about."
+    "Whoever wrote it wasn't wrong. There isn't a single star visible tonight. Sometimes, when getting kebabs with cowroekrs after a late night shift you saw the moon."
+    "Tonight it is nowhere at all."
     "You suppose the City was never as bad for Emily in her family's polyceramic high-rise as it was for you. If it wasn't for the Section getting passed, she might never have-"
     set_screen forest1
     play music forestsong

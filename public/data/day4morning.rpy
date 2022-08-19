@@ -60,7 +60,7 @@ day4morning:
     "You can't see further than a few feet, and it's certainly not weather for easy conversation."
     "You almost sink back into a stupor, plodding on, feeling the rain ruin your hair. You should have brought a raincoat. Or an umbrella..."
     if (> $data.tensionPoints 5):
-        talk pa talk "You have both those in the city."
+        talk pa talk "You have both those in the City."
         talk pa talk "A full covered balcony terrace made from ceramic glass, even... If you want it."
     "A sudden gasp tears you from your thoughts."
     talk em talk "What is it?"
