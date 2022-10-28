@@ -1,0 +1,346 @@
+
+
+/*! @import */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #131720;
+  --text-color: #f3d13b;
+  --primary: hsl(255, 30%, 55%);
+  --focus: hsl(210, 90%, 50%);
+  --secondary: #42b983;
+  --border-color: hsla(0, 0%, 100%, 0.2);
+  --light-1: hsl(0, 44%, 31%);
+  --light-2: hsl(0, 44%, 31%);
+  --light-background: linear-gradient(to right, var(--light-1), var(--light-2));
+  --shadow-1: hsla(194, 31%, 14%, 0.3);
+  --shadow-2: hsla(6, 62%, 41%, 0.578);
+  --hud-background: rgba(0, 0, 0, 0.4);
+  --hud-text-color: var(--text-color);
+  --notifications-bg: rgb(62, 77, 76);
+
+  --skills-text-background: rgba(0, 0, 0, 0.5);
+  --skills-text-color: var(--text-color);
+  --skills-level-background: rgba(0, 0, 0, 0.5);
+  --skills-level-color: orange;
+  --skills-xp-bar-height: 40px;
+
+  --skill-check-name-color: orange;
+  --skill-check-difficulty: orange;
+  --skill-check-success: green;
+  --skill-check-failed: red;
+  --skill-check-color: orange;
+
+  --dialog-choice-color: orange;
+  --dialog-choice-hover-color: #f3d13b;
+}
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s ease;
+}
+
+/* .list-move {
+  transition: transform 0.3s ease;
+} */
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(300px);
+}
+
+.notification-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.notification-enter-active,
+.notification-leave-active {
+  transition: all 0.3s ease;
+}
+
+/* .notification-move {
+  transition: transform 0.3s ease;
+} */
+.notification-enter-from,
+.notification-leave-to {
+  opacity: 0;
+  transform: translateY(-300px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-in-enter-active {
+  transition: opacity 0.1s ease;
+}
+
+.fade-in-enter-from {
+  opacity: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: black;
+}
+
+.select {
+  background: var(--light-background);
+  padding: 0px;
+}
+
+.option {
+  background-color: var(--light-2);
+  padding: 0px;
+  color: var(--text-color);
+}
+
+.button {
+  background: var(--light-background);
+  color: var(--text-color);
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem var(--shadow-1);
+  border-radius: 0px;
+  padding: 2px;
+  font-weight: 800;
+  font-size: 16px;
+  margin: 10px;
+  transition: 0.2s;
+}
+
+.button:focus,
+.button:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0 2.4rem 0.2rem var(--shadow-2);
+}
+
+.input {
+  background: var(--light-background);
+  color: var(--text-color);
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem var(--shadow-1);
+  border-radius: 100px;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 16px;
+  margin: 10px;
+  transition: 0.2s;
+}
+
+.input:focus,
+.input:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0 2.4rem 0.2rem var(--shadow-2);
+}
+
+a {
+  color: pink;
+  text-decoration: underline;
+}
+
+th,
+td {
+  padding: 4px;
+  border: 1px solid var(--text-color);
+  text-align: center;
+}
+
+#game-holder {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: -webkit-fill-available;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+hr.solid {
+  border: 1px solid var(--text-color);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.dialog-choice {
+  transition: 0.2s;
+}
+
+.dialog-choice:hover {
+  transform: scale(1.05, 1.05);
+  transform-origin: center;
+}
+
+/* Somewhat arcane CSS to force the hover color to override the child style.
+Otherwise hovering choices doesn't change the color of skill check prompts. */
+.dialog-choice:not(:hover) > .skill-check-name,
+.passive-skill-check > .skill-check-name {
+  color: var(--skill-check-name-color);
+}
+
+.dialog-choice:not(:hover) > .skill-check-difficulty,
+.passive-skill-check > .skill-check-difficulty {
+  color: var(--skill-check-difficulty);
+}
+
+.skill-check-difficulty {
+  font-weight: 700;
+}
+
+.dialog-choice:not(:hover) > .skill-check-success,
+.passive-skill-check > .skill-check-success {
+  color: var(--skill-check-success);
+}
+
+.dialog-choice:not(:hover) > .skill-check-failed,
+.passive-skill-check > .skill-check-failed {
+  color: var(--skill-check-failed);
+}
+
+.dialog-choice:not(:hover) > .skill-check,
+.passive-skill-check.skill-check {
+  color: var(--skill-check-color);
+}
+
+.narrat-canvas {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#touchTrigger {
+  pointer-events: none;
+}
+
+
+.dialog-title.override {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+}
+
+.dialog-text.override {
+  font-size: 1.1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #F5F4C0;
+}
+
+.dialog-choice.override {
+  font-size: 1.2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dialog-choice.override:hover{
+    color: #3f3030;
+    background-color: #F5F4C0;
+}
+
+.modal-container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.button.menu-toggle-button{
+    user-select: none;
+    -moz-user-select: none;
+    background-image: url("img/ui/menu0.png") !important;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0) !important;
+
+}
+.button.menu-toggle-button:hover{
+    background-image: url("img/ui/menu1.png") !important;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0) !important;
+
+}
+.dialog.override {
+  background-image: url("img/ui/text.png");
+}
+
+.dialog-container.override {
+  background-color: rgba(0, 0, 0, 0) !important;
+  background-image: url("img/ui/scroll.png");
+  overflow-y: hidden;
+}
+* {
+    text-shadow: unset !important;
+  }
+.interact-button {
+    user-select: none;
+    -moz-user-select: none;
+    background-image: url("img/ui/continuet0.png") !important;
+    color: rgba(0, 0, 0, 0) !important;
+    font-size: 0%;
+}
+.interact-button:hover {
+    background-image: url("img/ui/continuet1.png") !important;
+    color: rgba(0, 0, 0, 0) !important;
+}
