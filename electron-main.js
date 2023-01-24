@@ -1,26 +1,42 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require("electron");
+
+// Set this to true if building for steam
+const useSteam = false;
+if (useSteam) {
+  const steamworks = require("steamworks.js");
+  console.log("stesmworks, ", steamworks);
+  const client = steamworks.init();
+
+  console.log("client", client);
+  console.log(client.localplayer.getName());
+  app.commandLine.appendSwitch("in-process-gpu");
+  app.commandLine.appendSwitch("disable-direct-composition");
+  app.allowRendererProcessReuse = false;
+}
 const path = require("path");
+// const result = greenworks.init();
+// console.log("result", result);
+// window.greenworks = greenworks;
 
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    autoHideMenuBar: true,
-    frame: false,
-    maximizable: true,
-    width: 1920,
-    height: 1080,
+    width: 1280,
+    height: 720,
     resizable: false,
     fullscreenable: true,
+    autoHideMenuBar: true,
     webPreferences: {
-      webSecurity: false,
       preload: path.join(__dirname, "electron-preload.js"),
+      nodeIntegration: true,
+      contextIsolation: false,
     },
   });
 
   // and load the index.html of the app.
-  mainWindow.setAspectRatio(1920 / 1080);
-  mainWindow.loadFile("build/index.html");
+  mainWindow.setAspectRatio(1280 / 720);
+  mainWindow.loadFile("dist/index.html");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -31,7 +47,6 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow();
-  mainWindow.maximize();
 
   app.on("activate", function () {
     // On macOS it's common to re-create a window in the app when the

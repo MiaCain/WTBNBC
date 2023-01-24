@@ -1,14 +1,48 @@
-{
-  "config": {
-    "imagesPath": "./img/characters/"
-  },
-  "characters":
-  {"game": {"name": "", "color": "#F5F4C0"},
-  "player":{"sprites":{"talk": "PA.png"}, "name": ""},
-  "em":    {"sprites":{"talk": "Em.png"}, "name": "Emily", "style":{"color": "#7d9a8b"}},
-  "emdrm": {"sprites":{"talk": "EmDrm.png"}, "name": "EMILY?", "style":{"textCss": {"font-style":"bold", "color": "#fffdea"},"color": "#fff792"}},
-  "hrn":   {"sprites":{"talk": "Hrn.png"}, "name": "Hornet", "style":{"color": "#A48670"}},
-  "pa":    {"sprites":{"talk": "PA.png"}, "name": "", "style":{"textCss": {"font-style":"italic", "color": "#52BFCA"},"color": "#52BFCA"}},
-  "poet":  {"name": "", "style":{"textCss": {"font-style":"italic", "color": "#B7C1A7"},"color": "#B7C1A7"}}
-  }
-}
+---
+config:
+  imagesPath: "./img/characters/"
+characters:
+  game:
+    name: ''
+    color: "#F5F4C0"
+  player:
+    sprites:
+      talk: PA.png
+    name: ''
+  em:
+    sprites:
+      talk: Em.png
+    name: Emily
+    style:
+      color: "#7d9a8b"
+  emdrm:
+    sprites:
+      talk: EmDrm.png
+    name: EMILY?
+    style:
+      textCss:
+        font-style: bold
+        color: "#fffdea"
+      color: "#fff792"
+  hrn:
+    sprites:
+      talk: Hrn.png
+    name: Hornet
+    style:
+      color: "#A48670"
+  pa:
+    sprites:
+      talk: PA.png
+    name: ''
+    style:
+      textCss:
+        font-style: italic
+        color: "#52BFCA"
+      color: "#52BFCA"
+  poet:
+    name: ''
+    style:
+      textCss:
+        font-style: italic
+        color: "#B7C1A7"
+      color: "#B7C1A7"

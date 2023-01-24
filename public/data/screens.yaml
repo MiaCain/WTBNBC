@@ -1,0 +1,119 @@
+screens:
+  default:
+    background: narrat
+  title: 
+    background: img/backgrounds/Title.png
+  interl1: 
+    background: img/backgrounds/int1.png
+  interl1p: 
+    background: img/backgrounds/int1poem.png
+  interl2: 
+    background: img/backgrounds/int2.png
+  interl2p: 
+    background: img/backgrounds/int2poem.png
+  interl3: 
+    background: img/backgrounds/int3.png
+  interl3p: 
+    background: img/backgrounds/int3poem.png
+  intro1: 
+    background: img/backgrounds/Intro1.png
+  intro2: 
+    background: img/backgrounds/Intro2.png
+  offramp1: 
+    background: img/backgrounds/02_offramp1.png
+  offramp2: 
+    background: img/backgrounds/02_offramp2.png
+  offramp3: 
+    background: img/backgrounds/02_offramp3.png
+  forest1: 
+    background: img/backgrounds/03_forest1.png
+  forest2: 
+    background: img/backgrounds/03_forest2.png
+  forest2b: 
+    background: img/backgrounds/03_forest2b.png
+  forest3: 
+    background: img/backgrounds/03_forest3.png
+  forest4: 
+    background: img/backgrounds/03_forest4.png
+  banq1: 
+    background: img/backgrounds/04_banq01.png
+  banq2: 
+    background: img/backgrounds/04_banq02.png
+  banq3: 
+    background: img/backgrounds/04_banq03.png
+  banq4: 
+    background: img/backgrounds/04_banq04.png
+  swamp1: 
+    background: img/backgrounds/05_swamp01.png
+  swamp2: 
+    background: img/backgrounds/05_swamp02.png
+  swamp3: 
+    background: img/backgrounds/05_swamp03.png
+  swamp5: 
+    background: img/backgrounds/05_swamp05.png
+  swamp6: 
+    background: img/backgrounds/05_swamp06.png
+  tea1a: 
+    background: img/backgrounds/06_dream01.png
+  tea2a: 
+    background: img/backgrounds/06_dream02.png
+  tea1b: 
+    background: img/backgrounds/06_dream01b.png
+  tea2b: 
+    background: img/backgrounds/06_dream02b.png
+  tea3: 
+    background: img/backgrounds/06_dream03.png
+  river1: 
+    background: img/backgrounds/07_river01.png
+  river2: 
+    background: img/backgrounds/07_river02.png
+  river3a: 
+    background: img/backgrounds/07_river03Neutral.png
+  river3b: 
+    background: img/backgrounds/07_river03Angry.png
+  river3c: 
+    background: img/backgrounds/07_river03Happy.png
+  river4: 
+    background: img/backgrounds/07_river04.png
+  river5: 
+    background: img/backgrounds/07_river05.png
+  river6a: 
+    background: img/backgrounds/07_river06best.png
+  river6b: 
+    background: img/backgrounds/07_river06neut.png
+  river6c: 
+    background: img/backgrounds/07_river06worst.png
+  hollow1: 
+    background: img/backgrounds/08_dream01.png
+  hollow2: 
+    background: img/backgrounds/08_dream02.png
+  hollow3: 
+    background: img/backgrounds/08_dream03.png
+  end1: 
+    background: img/backgrounds/09_ending01.png
+  end2: 
+    background: img/backgrounds/09_ending02.png
+  end3: 
+    background: img/backgrounds/09_ending03.png
+  end4: 
+    background: img/backgrounds/09_ending04.png
+  end5: 
+    background: img/backgrounds/09_ending05.png
+  end6: 
+    background: img/backgrounds/09_ending06.png
+  end7a: 
+    background: img/backgrounds/09_ending07a.png
+  end7b: 
+    background: img/backgrounds/09_ending07b.png
+  endGood: 
+    background: img/backgrounds/09_endingGOOD.png
+  endMid: 
+    background: img/backgrounds/09_endingMID.png
+  endBad: 
+    background: img/backgrounds/09_endingBAD.png
+  blank: 
+    background: img/backgrounds/blank.png
+  error: 
+    background: img/backgrounds/error.png
+  outro1:
+    background: narrat
