@@ -51,14 +51,60 @@ day3dream:
         "You can feel yourself becoming blind. Feel your face turning into light. Feel your soul becoming"
         "a bonfire.":
             "Yes. A bonfire."
+            set data.SOUL 0
+            if(> $data.tensionPoints 3):
+                "A blaze, sloughing away your flesh, your impurities."
+                jump day3dream_cont
+            if(> $data.score 3):
+                "Yes. A beacon. An answer. A way to keep out the dark and keep Her warm."
+                jump day3dream_cont
+            "A great fire, trembling and hot."
+            jump day3dream_cont
         "smaller.":
-            "Yes. smaller."
+            "Yes. Smaller."
+            set data.SOUL 1
+            if(> $data.tensionPoints 3):
+                "It'll wither before long, a soul the size of a grain of salt, and then it will be gone."
+                jump day3dream_cont
+            if(> $data.score 3):
+                "Smaller and smaller. Until the world is too big to care about, and there is only you - and Her."
+                jump day3dream_cont
+            "But will it end...? What's going to happen to you?"
+            jump day3dream_cont
         "a hammer.":
-            "Yes. A tool."
+            "Yes. A hammer."
+            set data.SOUL 2
+            if(> $data.tensionPoints 3):
+                "An instrument of destruction. You will break Her."
+                jump day3dream_cont
+            if(> $data.score 3):
+                "A tool. You will mend everything. It will be alright..."
+                jump day3dream_cont
+            "Solid and purposeful..."
+            jump day3dream_cont
         "a nest.":
             "Yes. A nest."
+            set data.SOUL 3
+            if(> $data.tensionPoints 3):
+                "You can hide yourself inside it forever. Your cradle-tomb. Nothing need hurt you."
+                jump day3dream_cont
+            if(> $data.score 3):
+                "An object, a place, for love and for nourishing. And could She join you...?"
+                jump day3dream_cont
+            "A place to be safe."
+            jump day3dream_cont
         "a river.":
-            "Yes. A river."
+            set data.SOUL 4
+            if(> $data.tensionPoints 3):
+                "Carrying away the muck, the filth, the rot. The offall. Heaven's waterfront, wrapped in steel wire."
+                jump day3dream_cont
+            if(> $data.score 3):
+                "Cold, crystalline water. Singing when it rains, steaming in the spring, life and bounty unto those it cherishes."
+                jump day3dream_cont
+            "A ford, a torrent, clear and beautiful."
+            jump day3dream_cont
+
+day3dream_cont:
     "As your eyes adjust, you see many pools of clear water, feeding each other. They sparkle in the light."
     "You see your own face in some of them. Bright white and gold, a shooting star. Your hair looks good short."
     "You look good with freckles, even if they are only specks of dust."

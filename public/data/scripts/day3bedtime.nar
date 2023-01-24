@@ -31,8 +31,8 @@ day3bedtime:
     "Neither of you are very hungry, so you eat more of the bread. It's running low... Hopefully you'll find something to eat soon, you think."
     if (> $data.tensionPoints 4):
         "There's food back in the City..."
-        "You try to forget the thought."
-    "You make your makeshift bed and open the book you brought."
+        "You try to forget that notion."
+    "You make your makeshift nest and open the book you brought."
     if (> $data.tensionPoints 1):
         "Not a single word stays in your head, however. You're keyed up, distracted."
         "You start thinking about throwing the book in the river."
@@ -45,7 +45,8 @@ day3bedtime:
         talk hrn talk "Of course I will!"
         "She gives you a wry smile as she ducks out."
     else:
-        "You acknowledge her with a little grunt."
+        "You acknowledge her with the barest grunt, staring at the pages."
+        "They may as well be blank."
     "She returns when it starts getting darker and the wind picks up."
     talk hrn talk "Well, the road keeps going on a while. I think there's a bridge in the distance, though I can't be sure."
     "She opens her bag to get a drink of water."
@@ -71,7 +72,7 @@ day3bedtime:
             "Hornet doesn't say another word. Neither do you."
             "You hear a gentle thump, and glance over; she's dropped her bag and is lying down."
             "You lean back too, staring up at the stained ceiling for a long time, even as the light fades."
-            "Hornet seems to fall asleep eventually. You don't really know how long it is until you do."
+            "Hornet seems to fall asleep eventually. You don't really know how long it is until you drift off too."
             jump opener3
         else:
             set_screen river6b

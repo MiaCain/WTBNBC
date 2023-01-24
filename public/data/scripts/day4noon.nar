@@ -87,7 +87,7 @@ day4noon_outside:
             "There was nothing you could do for her. You feel sick to your stomach."
             talk em talk "Why'd you have to drink that soda... Bandage that s-scratch... Stupid... Stupid rich girl..."
     "Tears come unbidden. They wash down your face with the rain."
-    if (> $data.score 4):
+    if (> $data.score 5):
         "Despite all of it..."
         "it could be worse, you guess. Maybe there's a chance she'll be okay."
         "Better check back on her..."
@@ -130,8 +130,19 @@ day4noon_outside:
         "Terror"
         "and misery."
         "This is your doing. Your dream. The pool."
+        if(== $data.SOUL 0):
+            "The bonfire. How will she know how warm it could get now..?"
+        if(== $data.SOUL 1):
+            "A soul too small to save her."
+        if(== $data.SOUL 2):
+            "Your hammer."
+        if(== $data.SOUL 3):
+            "A nest abandoned."
+        if(== $data.SOUL 4):
+            "The river. But wasn't she to share in it..."
+
         talk em talk "My, Hornet, what have I done to you..."
-        "The hair are soft. There's no trace of marring on the neck."
+        "The hair is soft. There's no trace of marring on the neck."
         "Terrified, you don't know what to do with it. Your world is spinning."
         choice:
             talk em talk "Hornet... Hornet, what..."
@@ -167,6 +178,12 @@ day4noon_outside:
         "Hornet seems to be awake. You gingerly step to her side, and touch her cheek. She looks up at you."
         talk hrn talk "Emily... You came back..."
         "Her cheeks are wet with sweat."
+        if(== $data.SOUL 4):
+            "A river..."
+        if(== $data.LOVE 1):
+            "The kiss flashes through your mind. But what more could you have done...?"
+        if(== $data.LOVE 2):
+            "No, not just sweat. Tears. You wish you'd kissed her then. You wish you'd done more to let her know..."
         talk hrn talk "You were gone so long, I thought..."
         talk em talk "I was only out a moment. How are you feeling?"
         "She doesn't really answer. Her eyes look like marbles, set in dark sockets."
@@ -194,6 +211,16 @@ day4noon_outside:
         "In your hand is Hornet's head. It looks..."
         "Fake. It's the plastic head of a toy, painted poorly, with a great helmet of 'hair'."
         "You stare at it in disgust and horror. Your dream... The pool..."
+        if(== $data.SOUL 0):
+            "Your hornet, immolated?"
+        if(== $data.SOUL 1):
+            "Did your heart become a peppercorn? Did you do this?"
+        if(== $data.SOUL 2):
+            "Your hammer."
+        if(== $data.SOUL 3):
+            "A nest, cold now."
+        if(== $data.SOUL 4):
+            "And that river. It has washed her away."
         "Blank, flat eyes stare at nothing."
         talk em talk "Hornet, what happened to you..."
         "A seam runs up the side of the head."
@@ -209,14 +236,14 @@ day4noon_outside:
         "Flowers are in full bloom all around it. Even within it. What used to be her body is just a hollow, now, for new life."
         "Two angel-wings of pulmonaria nestle in her clean white ribcage, her lungs turned to splendor. You can smell them from here."
         "You creep closer. There is nothing inside."
-        "Only an array of purple and blue and magenta blossoms."
-        "One of the flowers, a mutation, seems to glitter, golden."
+        "Only an array of purple and blue and magenta blossoms,"
+        "hornet no more."
         stop music
         set_screen interl2
         clear_dialog
         " "
         "..."
-        "NEUTRAL END"
+        "FLOWER END"
         jump outro1
 
 day4_endBad:
@@ -240,11 +267,21 @@ day4_endBad:
         talk emdrm talk "RUN."
         "(Run)":
             "You run."
+            if(== $data.SOUL 0):
+                "Within you blazes a fire like the sun."
+            if(== $data.SOUL 1):
+                "There is nothing inside you now."
+            if(== $data.SOUL 2):
+                "Your heart beats like it's striking hot iron;"
+            if(== $data.SOUL 3):
+                "You run for so long, thoughts of any home are forgotten."
+            if(== $data.SOUL 4):
+                "Crashing, a deluge."
             "Hornet does not follow you."
             stop music
             set_screen interl2
             clear_dialog
             " "
-            "BAD END"
+            "EMILY END"
             jump outro1
     

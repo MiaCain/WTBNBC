@@ -11,11 +11,11 @@ day1bedtime:
         "The poor darling needs her sleep..."
     talk em talk "-good. Good place to sleep. I think?"
     "You nod at her, already drawing closer."
-    talk hrn talk "I don't think anyone will find us here, they don't come out here, not this deep out in the woods. We walked most of the night."
+    talk hrn talk "I don't think anyone will find us here- they don't come out here, not this deep into the woods. We walked most of the night."
     "You take off your backpack and drop it between the roots."
     "Your shoulders ache."
     if $data.FORhasCoat:
-        "Emily pushes her baggage next to yours, and peeks inside the hollow."
+        "Emily pushes her luggage up next to yours, and peeks inside the hollow."
         talk em talk "It looks dry... Dirty though..."
         talk hrn talk "It's fine, you're wearing my coat anyway." 
         "She climbs inside. There's not that much room within, but you manage to sit down in the entrance anyway, leaning against her."

@@ -8,8 +8,8 @@ dialogPanel:
   bottomOffset: 0
   width: 475
   height: 1080
-  textSpeed: 20
-  animateText: true
+  textSpeed: 2
+  animateText: false
   timeBetweenLines: 100
 layout:
   backgrounds:

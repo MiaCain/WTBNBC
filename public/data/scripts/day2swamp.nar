@@ -2,7 +2,7 @@ day2swamp:
     clear_dialog
     set_screen swamp1
     play music swampsong
-    "The day is heady and foggy, only a little less cold than the night. You feel ambient moisture seeping into your dress, and are all the more glad for Hornet's coat."
+    "The day is heady and foggy, only a little less cold than the night. You feel ambient moisture seeping into your dress, and are all happier for Hornet's coat."
     "The two of you eat some conserved sheep sausage and tin bread for breakfast."
     "You don't bring up having woken Hornet up, and she doesn't either - hopefully she's forgotten. It makes you a little ashamed to remember."
     talk hrn talk "It's a good thing we didn't go any further last night."
@@ -60,12 +60,12 @@ day2swamp_cont:
                 "There's something very bitter in her voice. it makes you uneasy."
                 add data.score -1
             talk hrn talk "I did *tell* you."
-            "She moves a little faster, neglecting to even look back at you."
+            "She moves a little faster, neglecting even to look back at you."
             "Something about this feels like an open wound; it makes you very uncomfortable."
         "Say nothing":
             "You stay quiet."
     "You keep walking in silence for some time."
-    "Thump, thump, thump, thump, thump. Your feet feel tired, squeezed into these boots, and you have to switch hands every now and then, the suitcase tugging at your wrist."
+    "Thump, thump, thump, thump, thump. Your feet are tired, squeezed into these boots, and you have to switch hands every now and then, the suitcase tugging at your wrist."
     "Eventually, Hornet slows her pace a little, and gazes into the mist."
     talk hrn talk "I'm glad you agreed to meet me at the Station, Emily, but..."
     "She struggles for a moment."
@@ -168,7 +168,7 @@ day2swamp_fire:
             add data.tensionPoints 1
             "Her face falls a little."
             talk hrn talk "Emily, I was being serious..."
-            "You feel a pang of guilt. Even though you were, too!"
+            "You feel a pang of guilt. Even though you were being serious, too!"
             talk hrn talk "Look, let's just clean up."
             "She rises."
     "You help her clean, though you feel terribly clumsy next to her. She's like an automaton in one of Pa's factories."

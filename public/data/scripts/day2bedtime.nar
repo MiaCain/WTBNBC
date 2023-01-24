@@ -48,7 +48,7 @@ day2bedtime_firstaid:
                     "Hornet looks suddenly very irritated, only glancing at the gash."
                     talk hrn talk "What? There's nothing-"
                     "She seems to remember, and takes a second look at the scratch."
-                    talk em talk "You're still going on about that?"
+                    talk hrn talk "You're still going on about that?"
                     "She moves away from you."
                     talk hrn talk "There's bandages in here."
                     "She rummages in the case and shows you an aluminium tube."

@@ -8,7 +8,7 @@ const useSteam = false;
 // Set this to false if you want debug to always be disabled.
 // Note: Debug gets auto disabled on builds via the environment variable "VITE_BUILD", passed by the script that runs the game.
 
-let debug = true;
+let debug = false;
 
 if (import.meta.env.VITE_BUILD && !import.meta.env.VITE_DEBUG) {
   debug = false;

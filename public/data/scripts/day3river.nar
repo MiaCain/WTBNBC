@@ -60,9 +60,10 @@ day3river:
                 "You think you detect Hornet's nose wrinkling slightly."
                 talk hrn talk "Well aren't you clever. Alright."
                 if $data.OR.bagmention:
-                    "Let's go then. I was already missing the sound of your suitcase rattling."
-                    "You ignore her, but start walking."
-                "You start walking, and Hornet follows."
+                    talk hrn talk "Let's get going then. I was already missing the sound of your suitcase rattling."
+                    "Ignoring her, you start walking, Hornet following after a moment or two."
+                else:
+                    "You start walking, and Hornet follows."
             else:
                 "Hornet's eyes widen a sliver."
                 talk hrn talk "Oh, smart. I guess we can do that."
@@ -183,10 +184,10 @@ day3river_walk:
         if (== $data.OR.leaveReason 3):
             talk hrn talk "Well, you left because of the... The feeling, you said."
             "So many sleepless nights. So much time looking down at all the winding suprastructures. The great concrete circuit..."
-        "But I just feel like..."
+        talk hrn talk "But I just feel like..."
         if (== $data.OR.cityfeeling 1):
             talk hrn talk "That place was killing me. There were places to hide, but, we was always..."
-            "she casts around for the right words."
+            "She casts around for the right words."
             talk hrn talk "I was always in the belly of the beast, I guess. Does that make sense?"
             "She seems distraught now."
             talk hrn talk "I... I felt like, after the section got signed into law, that was almost an excuse to finally get out. I couldn't even talk to anyone for the longest time..."

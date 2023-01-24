@@ -1,23 +1,22 @@
-
-
 /*! @import */
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
 
 :root {
-  --bg-color: #131720;
-  --text-color: #f3d13b;
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  --bg-color: #171717;
+  --text-color: #e7d069;
   --primary: hsl(255, 30%, 55%);
   --focus: hsl(210, 90%, 50%);
   --secondary: #42b983;
-  --border-color: hsla(0, 0%, 100%, 0.2);
-  --light-1: hsl(0, 44%, 31%);
-  --light-2: hsl(0, 44%, 31%);
+  --border-color: hsla(0, 0%, 100%, 0);
+  --light-1: hsl(0, 34%, 28%);
+  --light-2: hsl(0, 34%, 28%);
   --light-background: linear-gradient(to right, var(--light-1), var(--light-2));
-  --shadow-1: hsla(194, 31%, 14%, 0.3);
-  --shadow-2: hsla(6, 62%, 41%, 0.578);
-  --hud-background: rgba(0, 0, 0, 0.4);
+  --shadow-1: hsla(194, 31%, 14%, 0.1);
+  --shadow-2: hsla(6, 62%, 41%, 0.1);
+  --hud-background: #262323;
   --hud-text-color: var(--text-color);
   --notifications-bg: rgb(62, 77, 76);
 
@@ -45,9 +44,6 @@
   transition: all 0.3s ease;
 }
 
-/* .list-move {
-  transition: transform 0.3s ease;
-} */
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
@@ -60,12 +56,9 @@
 }
 .notification-enter-active,
 .notification-leave-active {
-  transition: all 0.3s ease;
+  transition: all 0s ease;
 }
 
-/* .notification-move {
-  transition: transform 0.3s ease;
-} */
 .notification-enter-from,
 .notification-leave-to {
   opacity: 0;
@@ -74,7 +67,7 @@
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0s ease;
 }
 
 .fade-enter-from,
@@ -83,7 +76,7 @@
 }
 
 .fade-in-enter-active {
-  transition: opacity 0.1s ease;
+  transition: opacity 0s ease;
 }
 
 .fade-in-enter-from {
@@ -93,7 +86,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   background-color: black;
 }
 
@@ -111,31 +104,33 @@ body {
 .button {
   background: var(--light-background);
   color: var(--text-color);
-  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem var(--shadow-1);
+  box-shadow: 0.1rem 0.1rem 0.4rem 0.03rem var(--shadow-1);
   border-radius: 0px;
-  padding: 2px;
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
   font-weight: 800;
   font-size: 16px;
   margin: 10px;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .button:focus,
 .button:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 0 2.4rem 0.2rem var(--shadow-2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0 0.4rem 0.1rem var(--shadow-2);
 }
 
 .input {
   background: var(--light-background);
   color: var(--text-color);
   box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem var(--shadow-1);
-  border-radius: 100px;
+  border-radius: 1px;
   padding: 10px;
   font-weight: 800;
   font-size: 16px;
   margin: 10px;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .input:focus,
@@ -206,32 +201,37 @@ hr.solid {
 }
 
 .card-1 {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 0px 0px #262323, 0 0px 0px #262323;
+  transition: all 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .card-1:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0px 0px #181717, 0 0px 0px #181717;
 }
 
 .card-2 {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 0px 0px #181717, 0 0px 0px #181717;
 }
 
 .card-3 {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 0px 0px #181717, 0 0px 0px #181717;
 }
 
 .card-4 {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0px 0px #181717, 0 0px 0px #181717;
 }
 
 .card-5 {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0px 0px #181717, 0 0px 0px #181717;
+}
+
+.dialog-choices {
+  padding-top: 12px;
+  padding-left: 12px;
 }
 
 .dialog-choice {
-  transition: 0.2s;
+  transition: 0s;
 }
 
 .dialog-choice:hover {
@@ -281,66 +281,185 @@ Otherwise hovering choices doesn't change the color of skill check prompts. */
   pointer-events: none;
 }
 
-
 .dialog-title.override {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.5em;
 }
 
 .dialog-text.override {
   font-size: 1.1em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #F5F4C0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #f5f4c0;
 }
 
 .dialog-choice.override {
   font-size: 1.2em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.dialog-choice.override:hover{
-    color: #3f3030;
-    background-color: #F5F4C0;
+.dialog-choice.override:hover {
+  color: #3f3030;
+  background-color: #f5f4c0;
 }
 
-.modal-container{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.modal-container {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.button.menu-toggle-button{
-    user-select: none;
-    -moz-user-select: none;
-    background-image: url("img/ui/menu0.png") !important;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0) !important;
-
+.button.menu-toggle-button {
+  user-select: none;
+  -moz-user-select: none;
+  background-image: url("img/ui/menu0.png") !important;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0) !important;
 }
-.button.menu-toggle-button:hover{
-    background-image: url("img/ui/menu1.png") !important;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0) !important;
-
+.button.menu-toggle-button:hover {
+  background-image: url("img/ui/menu1.png") !important;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0) !important;
 }
 .dialog.override {
   background-image: url("img/ui/text.png");
+  box-shadow: none;
 }
 
 .dialog-container.override {
   background-color: rgba(0, 0, 0, 0) !important;
   background-image: url("img/ui/scroll.png");
   overflow-y: hidden;
+  --shadow-1: hsla(0, 0%, 0%, 0);
 }
 * {
-    text-shadow: unset !important;
-  }
+  text-shadow: unset !important;
+}
 .interact-button {
-    user-select: none;
-    -moz-user-select: none;
-    background-image: url("img/ui/continuet0.png") !important;
-    color: rgba(0, 0, 0, 0) !important;
-    font-size: 0%;
+  user-select: none;
+  -moz-user-select: none;
+  background-image: url("img/ui/continuet0.png") !important;
+  color: rgba(0, 0, 0, 0) !important;
+  font-size: 0%;
+  font-size: 2rem;
+  background-size: contain;
+  border-color: #131720;
+  padding: 0px;
+  background-repeat: no-repeat;
 }
 .interact-button:hover {
-    background-image: url("img/ui/continuet1.png") !important;
-    color: rgba(0, 0, 0, 0) !important;
+  background-image: url("img/ui/continuet1.png") !important;
+  color: rgba(0, 0, 0, 0) !important;
+}
+
+.auto-skip-buttons {
+  display: none;
+}
+.button.menu-toggle-button#menu-menu-button {
+  display: none;
+}
+
+.button.menu-toggle-button {
+  font-size: 0.8rem;
+  padding: 0px !important;
+  margin: 0% !important;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  --font-family: Georgia, "Times New Roman", Times, serif;
+  --modal-background: #262323;
+}
+
+#game-title-container {
+  display: none;
+}
+
+.start-menu-buttons-container {
+  width: 400px;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 14%;
+  left: 40%;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+}
+
+.button.large {
+  border-radius: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 8px;
+  background: #509b8b;
+  color: #2d2626;
+}
+.button.large:hover {
+  --shadow-2: #3b5750;
+}
+
+.save-slot {
+  border: 0px;
+}
+.save-info {
+  border-right: 0px;
+  border-left: 0px;
+}
+.save-slot-screenshot {
+  border-left: 0px;
+}
+
+#game-header {
+  position: fixed;
+  bottom: 0%;
+  left: 40%;
+}
+#game-menu {
+  background-image: url("img/ui/BGMain.png") !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dialog-picture {
+  border: 2px solid #846d5d;
+  border-radius: 2px;
+}
+
+.volume-controls {
+  border: 0px;
+}
+
+.menu-modal {
+  height: auto;
+  background-color: #1f1c1c;
+}
+
+.narrat-transition-slide-right-enter-active,
+.narrat-transition-slide-right-leave-active {
+  transition-property: transform;
+  transition-timing-function: linear;
+  transition-duration: 0s;
+}
+
+.narrat-transition-slide-right-enter-from {
+  transform: translateX(-100%);
+}
+.narrat-transition-slide-right-leave-to {
+  transform: translateX(100%);
+}
+
+.narrat-transition-fade-enter-active,
+.narrat-transition-fade-leave-active {
+  transition-property: opacity;
+  transition-timing-function: linear;
+  transition-duration: 0s;
+}
+
+.narrat-transition-fade-enter-from,
+.narrat-transition-fade-leave-to {
+  opacity: 0;
+}
+
+.dialog-box-followup {
+  margin-top: 8px;
 }
