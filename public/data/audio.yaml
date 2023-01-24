@@ -1,0 +1,46 @@
+files:
+  maintheme:
+    loop: true
+    src: music/maintheme.mp3
+  stationblues:
+    loop: true
+    src: music/stationblues.mp3
+  banquetsong:
+    loop: true
+    src: music/banquetsong.mp3
+  forestsong:
+    loop: true
+    src: music/forestsong.mp3
+  teasong:
+    loop: true
+    src: music/teasong.mp3
+  sleeptime:
+    loop: true
+    src: music/sleeptime.mp3
+  swampsong:
+    loop: true
+    src: music/swampsong.mp3
+  empty:
+    loop: true
+    src: music/empty.mp3
+  riverNice:
+    loop: true
+    src: music/riverNice.mp3
+  riverBad:
+    loop: true
+    src: music/riverBad.mp3
+  treedream:
+    loop: true
+    src: music/treedream.mp3
+  rainsong:
+    loop: true
+    src: music/rainsong.mp3
+  hornet:
+    loop: true
+    src: music/hornetThrenody.mp3
+options:
+  volume: 0.5
+  musicFadeInTime: 0.5
+  musicFadeInDelay: 0.5
+  musicFadeOutTime: 0.5
+audioTriggers: {}

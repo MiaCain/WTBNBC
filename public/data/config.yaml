@@ -1,188 +1,28 @@
-{
-  "gameTitle": "Two Women in Trouble",
-  "images": {
-    "narrat": "img/backgrounds/narrat.png",
-    "title": "img/backgrounds/Title.png",
-    "interl1": "img/backgrounds/int1.png",
-    "interl1p": "img/backgrounds/int1poem.png",
-    "interl2": "img/backgrounds/int2.png",
-    "interl2p": "img/backgrounds/int2poem.png",
-    "interl3": "img/backgrounds/int3.png",
-    "interl3p": "img/backgrounds/int3poem.png",
-    "intro1": "img/backgrounds/Intro1.png",
-    "intro2": "img/backgrounds/Intro2.png",
-    "offramp1": "img/backgrounds/02_offramp1.png",
-    "offramp2": "img/backgrounds/02_offramp2.png",
-    "offramp3": "img/backgrounds/02_offramp3.png",
-    "forest1": "img/backgrounds/03_forest1.png",
-    "forest2": "img/backgrounds/03_forest2.png",
-    "forest2b": "img/backgrounds/03_forest2b.png",
-    "forest3": "img/backgrounds/03_forest3.png",
-    "forest4": "img/backgrounds/03_forest4.png",
-    "banq1": "img/backgrounds/04_banq01.png",
-    "banq2": "img/backgrounds/04_banq02.png",
-    "banq3": "img/backgrounds/04_banq03.png",
-    "banq4": "img/backgrounds/04_banq04.png",
-    "swamp1": "img/backgrounds/05_swamp01.png",
-    "swamp2": "img/backgrounds/05_swamp02.png",
-    "swamp3": "img/backgrounds/05_swamp03.png",
-    "swamp5": "img/backgrounds/05_swamp05.png",
-    "swamp6": "img/backgrounds/05_swamp06.png",
-    "tea1a": "img/backgrounds/06_dream01.png",
-    "tea2a": "img/backgrounds/06_dream02.png",
-    "tea1b": "img/backgrounds/06_dream01b.png",
-    "tea2b": "img/backgrounds/06_dream02b.png",
-    "tea3": "img/backgrounds/06_dream03.png",
-    "river1": "img/backgrounds/07_river01.png",
-    "river2": "img/backgrounds/07_river02.png",
-    "river3a": "img/backgrounds/07_river03Neutral.png",
-    "river3b": "img/backgrounds/07_river03Angry.png",
-    "river3c": "img/backgrounds/07_river03Happy.png",
-    "river4": "img/backgrounds/07_river04.png",
-    "river5": "img/backgrounds/07_river05.png",
-    "river6a": "img/backgrounds/07_river06best.png",
-    "river6b": "img/backgrounds/07_river06neut.png",
-    "river6c": "img/backgrounds/07_river06worst.png",
-    "hollow1": "img/backgrounds/08_dream01.png",
-    "hollow2": "img/backgrounds/08_dream02.png",
-    "hollow3": "img/backgrounds/08_dream03.png",
-    "end1": "img/backgrounds/09_ending01.png",
-    "end2": "img/backgrounds/09_ending02.png",
-    "end3": "img/backgrounds/09_ending03.png",
-    "end4": "img/backgrounds/09_ending04.png",
-    "end5": "img/backgrounds/09_ending05.png",
-    "end6": "img/backgrounds/09_ending06.png",
-    "end7a": "img/backgrounds/09_ending07a.png",
-    "end7b": "img/backgrounds/09_ending07b.png",
-    "endGood": "img/backgrounds/09_endingGOOD.png",
-    "endMid": "img/backgrounds/09_endingMID.png",
-    "endBad": "img/backgrounds/09_endingBAD.png",
-    "blank": "img/backgrounds/blank.png",
-    "error": "img/backgrounds/error.png"
-  },
-  "layout": {
-    "backgrounds": {
-      "width": 1445,
-      "height": 1080
-    },
-    "dialogBottomPadding": 185,
-    "minTextWidth": 475,
-    "mobileDialogHeightPercentage": 60,
-    "verticalLayoutThreshold": 1000,
-    "portraits": {
-      "width": 200,
-      "height": 332
-    }
-  },
-  "screens": {
-    "default": {"background": "narrat"},
-    "title":   {"background": "title"},
-    "intro1":  {"background": "intro1"},
-    "intro2":  {"background": "intro2"},
-    "interl1": {"background": "interl1"},
-    "interl1p": {"background": "interl1p"},
-    "interl2": {"background": "interl2"},
-    "interl2p": {"background": "interl2p"},
-    "interl3": {"background": "interl3"},
-    "interl3p": {"background": "interl3p"},
-    "offramp1": {"background": "offramp1"},
-    "offramp2": {"background": "offramp2"},
-    "offramp3": {"background": "offramp3"},
-    "forest1": {"background": "forest1"},
-    "forest2": {"background": "forest2"},
-    "forest2b": {"background": "forest2b"},
-    "forest3": {"background": "forest3"},
-    "forest4": {"background": "forest4"},
-    "banq1": {"background": "banq1"},
-    "banq2": {"background": "banq2"},
-    "banq3": {"background": "banq3"},
-    "banq4": {"background": "banq4"},
-    "swamp1": {"background": "swamp1"},
-    "swamp2": {"background": "swamp2"},
-    "swamp3": {"background": "swamp3"},
-    "swamp5": {"background": "swamp5"},
-    "swamp6": {"background": "swamp6"},
-    "tea1a": {"background": "tea1a"},
-    "tea2a": {"background": "tea2a"},
-    "tea1b": {"background": "tea1b"},
-    "tea2b": {"background": "tea2b"},
-    "tea3": {"background": "tea3"},
-    "river1": {"background": "river1"},
-    "river2": {"background": "river2"},
-    "river3a": {"background": "river3a"},
-    "river3b": {"background": "river3b"},
-    "river3c": {"background": "river3c"},
-    "river4": {"background": "river4"},
-    "river5": {"background": "river5"},
-    "river6a": {"background": "river6a"},
-    "river6b": {"background": "river6b"},
-    "river6c": {"background": "river6c"},
-    "hollow1": {"background": "hollow1"},
-    "hollow2": {"background": "hollow2"},
-    "hollow3": {"background": "hollow3"},
-    "end1": {"background": "end1"},
-    "end2": {"background": "end2"},
-    "end3": {"background": "end3"},
-    "end4": {"background": "end4"},
-    "end5": {"background": "end5"},
-    "end6": {"background": "end6"},
-    "end7a": {"background": "end7a"},
-    "end7b": {"background": "end7b"},
-    "endGood": {"background": "endGood"},
-    "endMid": {"background": "endMid"},
-    "endBad": {"background": "endBad"},
-    "blank": {"background": "blank"},
-    "error": {"background": "error"},
-    "outro1": {"background": "narrat"}
-  },
-  "buttons": {},
-  "skills": {},
-  "skillChecks": {
-    "rollRange": 100,
-    "skillMultiplier": 10,
-    "failureChance": 1,
-    "difficultyText": [
-      [0, "Very Easy"],
-      [10, "Easy"],
-      [30, "Medium"],
-      [50, "Hard"],
-      [70, "Very Hard"],
-      [80, "Extremely Hard"],
-      [90, "Near Impossible"]
-    ]
-  },
-  "scripts": [
-      "data/main.nar",
-      "data/openers.nar",
-      "data/intro1.nar",
-      "data/day1bedtime.nar",
-      "data/day1forest.nar",
-      "data/day1bedtime.nar",
-      "data/day1dream.nar",
-      "data/day2swamp.nar",
-      "data/day2bedtime.nar",
-      "data/day2dream.nar",
-      "data/day3river.nar",
-      "data/day3bedtime.nar",
-      "data/day3dream.nar",
-      "data/day4morning.nar",
-      "data/day4noon.nar",
-      "data/outro1.nar",
-      "data/ASetAttributes.nar"
-    ],
-  "audio": {
-      "maintheme": {"loop": true, "src": "music/maintheme.mp3"},
-      "stationblues": {"loop": true, "src": "music/stationblues.mp3"},
-      "banquetsong": {"loop": true, "src": "music/banquetsong.mp3"},
-      "forestsong": {"loop": true, "src": "music/forestsong.mp3"},
-      "teasong": {"loop": true, "src": "music/teasong.mp3"},
-      "sleeptime": {"loop": true, "src": "music/sleeptime.mp3"},
-      "swampsong": {"loop": true, "src": "music/swampsong.mp3"},
-      "empty": {"loop": true, "src": "music/empty.mp3"},
-      "riverNice": {"loop": true, "src": "music/riverNice.mp3"},
-      "riverBad": {"loop": true, "src": "music/riverBad.mp3"},
-      "treedream": {"loop": true, "src": "music/treedream.mp3"},
-      "rainsong": {"loop": true, "src": "music/rainsong.mp3"},
-      "hornet": {"loop": true, "src": "music/hornetThrenody.mp3"}
-  }
-}
+---
+gameTitle: Two Women in Trouble
+images:
+  narrat: img/backgrounds/narrat.png
+dialogPanel:
+  overlayMode: false
+  rightOffset: 0
+  bottomOffset: 0
+  width: 475
+  height: 1080
+  textSpeed: 20
+  animateText: true
+  timeBetweenLines: 100
+layout:
+  backgrounds:
+    width: 1445
+    height: 1080
+  dialogBottomPadding: 185
+  mobileDialogHeightPercentage: 60
+  verticalLayoutThreshold: 1000
+  portraits:
+    width: 200
+    height: 332
+scripts: data/scripts.yaml
+characters: data/characters.yaml
+screens: data/screens.yaml
+audio: data/audio.yaml
+hudStats: {}

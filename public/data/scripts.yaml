@@ -1,0 +1,18 @@
+---
+- data/scripts/main.nar
+- data/scripts/openers.nar
+- data/scripts/intro1.nar
+- data/scripts/day1bedtime.nar
+- data/scripts/day1forest.nar
+- data/scripts/day1bedtime.nar
+- data/scripts/day1dream.nar
+- data/scripts/day2swamp.nar
+- data/scripts/day2bedtime.nar
+- data/scripts/day2dream.nar
+- data/scripts/day3river.nar
+- data/scripts/day3bedtime.nar
+- data/scripts/day3dream.nar
+- data/scripts/day4morning.nar
+- data/scripts/day4noon.nar
+- data/scripts/outro1.nar
+- data/scripts/ASetAttributes.nar
