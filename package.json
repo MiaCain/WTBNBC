@@ -60,7 +60,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "narrat-demo"
+            "name": "two-women-in-trouble"
           }
         },
         {
