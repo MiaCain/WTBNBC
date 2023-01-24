@@ -1,6 +1,6 @@
 {
   "name": "two-women-in-trouble",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Two Women in Trouble",
   "main": "electron-main.js",
   "keywords": [
@@ -22,9 +22,9 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "es6-promise": "^4.2.8",
-    "narrat": "^2.0.6",
-    "vue": "^3.2.37",
-    "pinia": "^2.0.14"
+    "narrat": "^2.10.5",
+    "pinia": "^2.0.14",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
