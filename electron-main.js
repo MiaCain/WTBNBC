@@ -22,11 +22,15 @@ const path = require("path");
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1280,
-    height: 720,
+    width: 1920,
+    height: 1080,
     resizable: false,
+    maximizable: true,
     fullscreenable: true,
+    fullscreen: true,
+    maximize: true,
     autoHideMenuBar: true,
+    icon: "/favicon.png",
     webPreferences: {
       preload: path.join(__dirname, "electron-preload.js"),
       nodeIntegration: true,
@@ -35,8 +39,9 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  mainWindow.setAspectRatio(1280 / 720);
+  mainWindow.setAspectRatio(1920 / 1080);
   mainWindow.loadFile("dist/index.html");
+  mainWindow.maximize();
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

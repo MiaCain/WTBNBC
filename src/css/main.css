@@ -309,23 +309,23 @@ Otherwise hovering choices doesn't change the color of skill check prompts. */
 .button.menu-toggle-button {
   user-select: none;
   -moz-user-select: none;
-  background-image: url("img/ui/menu0.png") !important;
+  background-image: url(/img/ui/menu0.png) !important;
   background-color: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0) !important;
 }
 .button.menu-toggle-button:hover {
-  background-image: url("img/ui/menu1.png") !important;
+  background-image: url(/img/ui/menu1.png) !important;
   background-color: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0) !important;
 }
 .dialog.override {
-  background-image: url("img/ui/text.png");
+  background-image: url(/img/ui/text.png);
   box-shadow: none;
 }
 
 .dialog-container.override {
   background-color: rgba(0, 0, 0, 0) !important;
-  background-image: url("img/ui/scroll.png");
+  background-image: url(/img/ui/scroll.png);
   overflow-y: hidden;
   --shadow-1: hsla(0, 0%, 0%, 0);
 }
@@ -335,7 +335,7 @@ Otherwise hovering choices doesn't change the color of skill check prompts. */
 .interact-button {
   user-select: none;
   -moz-user-select: none;
-  background-image: url("img/ui/continuet0.png") !important;
+  background-image: url(/img/ui/continuet0.png) !important;
   color: rgba(0, 0, 0, 0) !important;
   font-size: 0%;
   font-size: 2rem;
@@ -345,7 +345,7 @@ Otherwise hovering choices doesn't change the color of skill check prompts. */
   background-repeat: no-repeat;
 }
 .interact-button:hover {
-  background-image: url("img/ui/continuet1.png") !important;
+  background-image: url(/img/ui/continuet1.png) !important;
   color: rgba(0, 0, 0, 0) !important;
 }
 
@@ -415,7 +415,7 @@ body {
   left: 40%;
 }
 #game-menu {
-  background-image: url("img/ui/BGMain.png") !important;
+  background-image: url(/img/ui/BGMain.png) !important;
   background-size: contain;
   background-repeat: no-repeat;
 }
